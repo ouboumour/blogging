@@ -60,5 +60,5 @@ systemctl restart <YOUR_SERVICE_NAME>
 
 #### Reload a Service (take teh change into account without a stopping the service)
 ```bash
-systemctl relod <YOUR_SERVICE_NAME>
+systemctl reload <YOUR_SERVICE_NAME>
 ```
