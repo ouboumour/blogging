@@ -4,12 +4,12 @@
 
 ###### Method 1
 ```bash
-$ timedatectl
+timedatectl
 ```
 
 ###### Method 2
 ```bash
-$ ls -l /etc/localtime
+ls -l /etc/localtime
 ```
 
 
