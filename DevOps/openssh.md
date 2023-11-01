@@ -52,7 +52,7 @@ Note: for Debian-based Linux distros you can use interchangeably **ssh** and **s
 ## Connect to a remote machine using OpenSSH Client
 #### Remote machine prerequisites
 1. Install **openssh-server** package.
-2. Allows traffic incoming via port 22
+2. Allows traffic incoming via port 22.
 
 #### Connect to remote machine using OpenSSH Client
 Once the prerequisites above are satisfied, you can go ahead and connect to the remote machine.
@@ -60,8 +60,3 @@ Once the prerequisites above are satisfied, you can go ahead and connect to the 
 ssh <YOUR_REMOTE_SERVER_USERNAME>@<YOUR_REMOTE_SERVER_ADDRESS>
 ```
 Note: For the very first time you are trying to connect to the remote machine, you'll be asked if you are sure you want to connect, just type yes. After that, you'll be asked to type the password for that specific user you want to connect with. Type the password and hit enter.
-
-
-
-
-
