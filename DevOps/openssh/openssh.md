@@ -57,7 +57,7 @@ Note: for Debian-based Linux distros you can use interchangeably **ssh** and **s
 #### Connect to remote machine using OpenSSH Client
 Once the prerequisites above are satisfied, you can go ahead and connect to the remote machine.
 ```bash
-ssh <YOUR_REMOTE_SERVER_USERNAME>@<YOUR_REMOTE_SERVER_IP_ADDRESS>
+ssh -p <PORT_NUMBER> <YOUR_REMOTE_SERVER_USERNAME>@<YOUR_REMOTE_SERVER_IP_ADDRESS>
 ``` 
 
 For the very first time you are trying to connect to the remote machine, you'll be asked if you are sure you want to connect, just type yes. After that, you'll be asked to type the password for that specific user you want to connect with. Type the password and hit enter.
@@ -97,14 +97,31 @@ Note: providing a passphrase is recommended for security purposes.
 Copy **~/.ssh/id_ed25519.pub** content and paste it in **~/.ssh/authorized_keys**.
 ###### Method 2: Automatically with one command
 ```bash
-ssh-copy-id -i <PATH_TO_YOUR_PUB_KEY> <YOUR_IP_ADDRESS>
+ssh-copy-id -i <PATH_TO_YOUR_PUB_KEY> -p <PORT_NUMBER> <YOUR_IP_ADDRESS>
 ```
 
 As a result, your ssh connection is not password-based anymore.
 Its keys-based and you'll be asked to enter your passphrase instead of the password.
 
-## Connect to a remote server using keyfile-based ssh
+#### Connect to a remote server using keyfile-based ssh
 ```bash
-ssh -i <PATH_TO_YOUR_PRIVATE_KEY> <YOUR_REMOTE_SERVER_USERNAME>@<YOUR_REMOTE_SERVER_IP_ADDRESS>
+ssh -i <PATH_TO_YOUR_PRIVATE_KEY> -p <PORT_NUMBER> <YOUR_REMOTE_SERVER_USERNAME>@<YOUR_REMOTE_SERVER_IP_ADDRESS>
 ``` 
 Note: If you kept the default suggested private file (name and path), there is no need to provide the private file.
+
+#### ssh-agent
+**ssh-agent** helps you cash the key in-memory so that you only need to enter the passphrase onetime and then the key is unlocked for every connection attempt in the current session.
+###### Check if ssh-agent is running
+```bash
+ps aux | grep ssh-agent 
+```
+###### run the ssh-agent
+```bash
+eval $(ssh-agent) 
+```
+###### Add a private key to the ssh-agent
+To unlock the private key for the whole session, you can use ssh-add utility.
+```bash
+ssh-add <PATH_TO_YOUR_PRIVATE_KEY> 
+```
+Now next time you'll try to connect to the remote server via ssh, it should not ask for the passphrase.
