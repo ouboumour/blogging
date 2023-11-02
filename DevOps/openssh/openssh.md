@@ -83,3 +83,9 @@ Which makes the process of keeping track of all prams for each even harder.
 Fortunately, you can store that information in a specific file under **~/.ssh/config** and gives them an id.
 That way you only need to provide that id,
 the openssh then will grab all the needed information by looking at that specific file.
+
+## Using public/private keys
+#### Create a key/pair
+```bash
+ssh-keygen -t [ed25519|rsa|dsa|ecdsa|<YOUR_PUBLIC_KEY_ALGORITHM>] -C "<YOUR_COMMENT>"
+```
