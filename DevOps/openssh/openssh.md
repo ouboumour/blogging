@@ -90,6 +90,8 @@ the openssh then will grab all the needed information by looking at that specifi
 
 ![ssh_config](images/ssh_config.png)
 
+Note: **~/.ssh/config** override the system config file that you can find at **/etc/ssh/ssh_config**
+
 ## Using public/private keys
 #### Create a key pair (from the client instance)
 ```bash
