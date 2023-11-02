@@ -75,7 +75,7 @@ to see logs that describe what's going on when another machine tries to connect 
 The file location depends on the Linux instance used.
 In Debian-based Linux Distros you can find it under **/var/log/auth.log**.
 
-## Simplify ssh connection
+## Simplify ssh connection with config file
 As you may have noticed, connecting to a remote machine via ssh requires providing much information
 (username, ip address, port number, ...).
 In the real world, you usually connect to many instances.
