@@ -58,10 +58,19 @@ Note: for Debian-based Linux distros you can use interchangeably **ssh** and **s
 Once the prerequisites above are satisfied, you can go ahead and connect to the remote machine.
 ```bash
 ssh <YOUR_REMOTE_SERVER_USERNAME>@<YOUR_REMOTE_SERVER_ADDRESS>
-```
-Note: For the very first time you are trying to connect to the remote machine, you'll be asked if you are sure you want to connect, just type yes. After that, you'll be asked to type the password for that specific user you want to connect with. Type the password and hit enter.
+``` 
+
+For the very first time you are trying to connect to the remote machine, you'll be asked if you are sure you want to connect, just type yes. After that, you'll be asked to type the password for that specific user you want to connect with. Type the password and hit enter.
 
 On the very first ssh connection to a remote machine,
 the **.ssh** directory is created inside the home directory
 which contains the **known_hosts** file that stores all the servers fingerprints. That way it'll not ask you again for the connection confirmation.       
 One other utility of the **known_hosts** file is that is preventing cyberattacks like Man-in-the-middle attack.
+
+## Keep track of ssh auth attempts
+As an administrator,
+you could tail the file /var for whatever your purpose
+to see logs that describe what's going on when another machine tries to connect to the remote sever.
+
+The file location depends on the Linux instance used.
+In Debian-based Linux Distros you can find it under **/var/log/auth.log** 
