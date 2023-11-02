@@ -73,4 +73,13 @@ you could tail the file /var for whatever your purpose
 to see logs that describe what's going on when another machine tries to connect to the remote sever.
 
 The file location depends on the Linux instance used.
-In Debian-based Linux Distros you can find it under **/var/log/auth.log** 
+In Debian-based Linux Distros you can find it under **/var/log/auth.log**.
+
+## Simplify ssh connection
+As you may have noticed, connecting to a remote machine via ssh requires providing much information
+(username, ip address, port number, ...).
+In the real world, you usually connect to many instances.
+Which makes the process of keeping track of all prams for each even harder. 
+Fortunately, you can store that information in a specific file under **~/.ssh/config** and gives them an id.
+That way you only need to provide that id,
+the openssh then will grab all the needed information by looking at that specific file.
