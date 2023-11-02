@@ -59,6 +59,8 @@ Once the prerequisites above are satisfied, you can go ahead and connect to the 
 ```bash
 ssh -p <PORT_NUMBER> <YOUR_REMOTE_SERVER_USERNAME>@<YOUR_REMOTE_SERVER_IP_ADDRESS>
 ``` 
+![ssh_first_connection](images/ssh_first_connection.png)
+
 
 For the very first time you are trying to connect to the remote machine, you'll be asked if you are sure you want to connect, just type yes. After that, you'll be asked to type the password for that specific user you want to connect with. Type the password and hit enter.
 
@@ -66,6 +68,8 @@ On the very first ssh connection to a remote machine,
 the **.ssh** directory is created inside the home directory
 which contains the **known_hosts** file that stores all the servers fingerprints. That way it'll not ask you again for the connection confirmation.       
 One other utility of the **known_hosts** file is that is preventing cyberattacks like Man-in-the-middle attack.
+
+![ssh_tree_after_first_connection](images/ssh_tree_after_first_connection.png)
 
 ## Keep track of ssh auth attempts
 As an administrator,
@@ -84,13 +88,20 @@ Fortunately, you can store that information in a specific file under **~/.ssh/co
 That way you only need to provide that id,
 the openssh then will grab all the needed information by looking at that specific file.
 
+![ssh_config](images/ssh_config.png)
+
 ## Using public/private keys
 #### Create a key pair (from the client instance)
 ```bash
 ssh-keygen -t [ed25519|rsa|dsa|ecdsa|<YOUR_PUBLIC_KEY_ALGORITHM>] -C "<YOUR_COMMENT>"
 ```
+
+![ssh_keygen](images/ssh_keygen.png)
+
 The public and private key will be respectively created under **~/.ssh/id_ed25519.pub** and **id_ed25519**.
 Note: providing a passphrase is recommended for security purposes.
+
+![ssh_tree_after_keygen](images/ssh_tree_after_keygen.png)
 
 #### Share the public key with the remote server
 ###### Method 1: Copy/paste the pub key manually
@@ -99,6 +110,7 @@ Copy **~/.ssh/id_ed25519.pub** content and paste it in **~/.ssh/authorized_keys*
 ```bash
 ssh-copy-id -i <PATH_TO_YOUR_PUB_KEY> -p <PORT_NUMBER> <YOUR_IP_ADDRESS>
 ```
+![ssh_copy_id](images/ssh_copy_id.png)
 
 As a result, your ssh connection is not password-based anymore.
 Its keys-based and you'll be asked to enter your passphrase instead of the password.
@@ -115,13 +127,21 @@ Note: If you kept the default suggested private file (name and path), there is n
 ```bash
 ps aux | grep ssh-agent 
 ```
+![ps_aux_ssh_agent](images/ps_aux_ssh_agent.png)
+
 ###### run the ssh-agent
 ```bash
 eval $(ssh-agent) 
 ```
+![eval_ssh_agent](images/eval_ssh_agent.png)
+
 ###### Add a private key to the ssh-agent
 To unlock the private key for the whole session, you can use ssh-add utility.
 ```bash
 ssh-add <PATH_TO_YOUR_PRIVATE_KEY> 
 ```
+![ssh_add](images/ssh_add.png)
+
 Now next time you'll try to connect to the remote server via ssh, it should not ask for the passphrase.
+
+![ssh_connection_after_ssh_add](images/ssh_connection_after_ssh_add.png)
