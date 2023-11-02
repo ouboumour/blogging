@@ -85,7 +85,20 @@ That way you only need to provide that id,
 the openssh then will grab all the needed information by looking at that specific file.
 
 ## Using public/private keys
-#### Create a key/pair
+#### Create a key pair (from the client instance)
 ```bash
 ssh-keygen -t [ed25519|rsa|dsa|ecdsa|<YOUR_PUBLIC_KEY_ALGORITHM>] -C "<YOUR_COMMENT>"
 ```
+The public and private key will be respectively created under **~/.ssh/id_ed25519.pub** and **id_ed25519**.
+Note: providing a passphrase is recommended for security purposes.
+
+#### Share the public key with the remote server
+###### Method 1: Copy/paste the pub key manually
+Copy **~/.ssh/id_ed25519.pub** content and paste it in **~/.ssh/authorized_keys**.
+###### Method 2: Automatically with one command
+```bash
+ssh-copy-id -i <PATH_TO_YOUR_PUB_KEY> <YOUR_IP_ADDRESS>
+```
+
+As a result, your ssh connection is not password-based anymore.
+Its keys-based and you'll be asked to enter your passphrase instead of the password. 
