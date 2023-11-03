@@ -147,3 +147,20 @@ ssh-add <PATH_TO_YOUR_PRIVATE_KEY>
 Now next time you'll try to connect to the remote server via ssh, it should not ask for the passphrase.
 
 ![ssh_connection_after_ssh_add](images/ssh_connection_after_ssh_add.png)
+
+## SSH Server Configuration
+The main file that you'll find your self modifying
+whenever you want to change the server ssh configuration is **/etc/ssh/sshd_config**.
+
+###### Change the Default SSH Port Number (22)
+You can do that by changing the **Port** key value inside the **sshd_config** file.
+
+###### Disable Permit Root Login
+You can do that by setting the **PermitRootLogin** key value to **no** inside the **sshd_config** file.
+
+Note: It is highly recommended to disable the ssh root login. 
+
+###### Disable Password Authentication
+You can do that by setting the **PasswordAuthentication** key value to **no** inside the **sshd_config** file.
+
+Note: It is highly recommended to disable the password authentication to force the keyfile-based authentication.
