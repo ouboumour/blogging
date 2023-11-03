@@ -164,3 +164,26 @@ Note: It is highly recommended to disable the ssh root login.
 You can do that by setting the **PasswordAuthentication** key value to **no** inside the **sshd_config** file.
 
 Note: It is highly recommended to disable the password authentication to force the keyfile-based authentication.
+
+## Troubleshooting
+You can help debugging the situation by following the logs.
+
+#### Method 1
+###### Debian-based Linux instances (tested on Ubuntu)
+```bash
+tail -f /var/log/auth.log
+```
+###### RPM-based Linux instances (tested on Fedora)
+```bash
+tail -f /var/log/secure
+```
+
+#### Method 2
+###### Debian-based Linux instances (tested on Ubuntu)
+```bash
+journalctl -fu ssh
+```
+###### RPM-based Linux instances (tested on Fedora)
+```bash
+journalctl -fu sshd
+```
