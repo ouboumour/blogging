@@ -187,3 +187,11 @@ journalctl -fu ssh
 ```bash
 journalctl -fu sshd
 ```
+
+## Quick tips using ssh
+
+#### Execute one command against the remote instance
+
+```bash
+ssh -p <PORT_NUMBER> <YOUR_REMOTE_SERVER_USERNAME>@<YOUR_REMOTE_SERVER_IP_ADDRESS> ls
+```
