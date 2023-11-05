@@ -10,9 +10,16 @@
 ## Prerequisites
 
 #### Check if the scp utility is available
+
+###### Method 1: using `which` utility
 ```bash 
 which scp
 ```
+###### Method 2: using `command` utility
+```bash 
+command -v scp
+```
+Both should return the utility absolute path, usually located at **/usr/bin/scp**.
 
 #### Check the ssh connection
 Since scp uses behind the scenes, the ssh protocol, make sure you can ssh the target machine before going any further.
