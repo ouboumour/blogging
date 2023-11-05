@@ -65,3 +65,12 @@ To transfer file for real, just get rid of the `--dry-run` option.
 ```bash
 rsync -rv <LOCAL_FILE_PATH> <REMOTE_SERVER_USERNAME>@<REMOTE_SERVER_IP_ADDRESS>:<REMOTE_SERVER_DIRECTORY_PATH> 
 ```
+
+###### Note:
+Like with scp command,
+you can flip the direction
+and copy files from the remote server to your local instance just by flipping the command args order.
+
+```bash
+rsync -rv <REMOTE_SERVER_USERNAME>@<REMOTE_SERVER_IP_ADDRESS>:<REMOTE_SERVER_DIRECTORY_PATH> <LOCAL_FILE_PATH>
+```
