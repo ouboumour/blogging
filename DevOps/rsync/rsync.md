@@ -19,7 +19,7 @@ Here's how **rsync** typically works:
 
 ## Prerequisites
 
-#### Check if the rsync utility is available
+#### Check if the rsync utility is available on both instances
 
 ###### Method 1: using `which` utility
 ```bash 
@@ -30,6 +30,8 @@ which rsync
 command -v rsync
 ```
 Both should return the utility absolute path, usually located at **/usr/bin/rsync**.
+If that's not the case, you can install the package **rsync** using apt, dnf,
+yum or whatever your package manager is depending on your Linux distros. 
 
 #### Check SSH Connection to the target machine
 Since rsync uses the SSH protocol behind the scenes,
@@ -40,3 +42,19 @@ ssh -p <PORT_NUMBER> <REMOTE_SERVER_USERNAME>@<REMOTE_SERVER_IP_ADDRESS>
 
 #### Check the target directory permissions
 Make sure you have the read/write permissions regrading the target directory.
+
+## Copy directories/files using scp
+
+#### Dry run for an overview of what's going to happen
+If you run the command with the `--dry-run` option, the command will not transfer the files,
+instead it'll check the SSH connection,
+the destination path and give you a list files that'll be transferred if you run it without that option.
+```bash
+rsync -rv --dry-run <LOCAL_FILE_PATH> <REMOTE_SERVER_USERNAME>@<REMOTE_SERVER_IP_ADDRESS>:<REMOTE_SERVER_DIRECTORY_PATH> 
+```
+
+With:
+
+`-r`: for recursive files copy if dealing with directories.
+
+`-v`: to increase verbosity for more visibility of what's going on once you run the command.
