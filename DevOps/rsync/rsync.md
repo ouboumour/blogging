@@ -58,3 +58,10 @@ With:
 `-r`: for recursive files copy if dealing with directories.
 
 `-v`: to increase verbosity for more visibility of what's going on once you run the command.
+
+#### Run rsync "for real"
+To transfer file for real, just get rid of the `--dry-run` option.
+
+```bash
+rsync -rv <LOCAL_FILE_PATH> <REMOTE_SERVER_USERNAME>@<REMOTE_SERVER_IP_ADDRESS>:<REMOTE_SERVER_DIRECTORY_PATH> 
+```
