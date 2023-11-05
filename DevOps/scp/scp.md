@@ -22,10 +22,14 @@ command -v scp
 Both should return the utility absolute path, usually located at **/usr/bin/scp**.
 
 #### Check the ssh connection
-Since scp uses behind the scenes, the ssh protocol, make sure you can ssh the target machine before going any further.
+Since scp uses the SSH protocol behind the scenes,
+you should make sure you can ssh the target machine before going any further.
 ```bash
 ssh -p <PORT_NUMBER> <REMOTE_SERVER_USERNAME>@<REMOTE_SERVER_IP_ADDRESS>
 ```
+
+#### Check the target directory permissions
+Make sure you have the read/write permissions regrading the target directory.
 
 ## Copy directories/files using scp
 
