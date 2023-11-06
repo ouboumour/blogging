@@ -5,10 +5,14 @@
 **Tmux** is a **terminal multiplexer**.
 **Tmux is** an alternative to **GNU Screen**.
 
-Tmux allows you to create many `sessions`.
+**Tmux** allows you to create many `sessions`.
 Each session can be associated with many `windows`.
 Each window can be split into rectangular `panes`.
 Each pane represents what we refer commonly to with a terminal.
+
+One of the most powerful features that **tmux** offers is
+that it keeps your sessions active in the background even if your ssh connection
+(for example) drops.
 
 ###### Tmux's terminology & Relationships
 Session `---*` Window
@@ -57,16 +61,16 @@ So the first created session will be identified by 0.
 
 ###### Important: For all the Shortcuts bellow, make sure your run them after typing the prefix `Ctrl + b`
 
-| Shortcut | Command                                    | Description                                 |
-|----------|--------------------------------------------|---------------------------------------------|
-| `%`      |                                            | Create new pane with vertical split.        |
-| `"`      |                                            | Create new pane with horizontal split.      |
-| `Arrows` |                                            | Switch between panes.                       |
-| `x`      |                                            | Kill the current pane.                      |
-| `,`      |                                            | Rename the current window                   |
-| `n`      |                                            | Move to the next window (same session).     |
-| `p`      |                                            | Move to the previous window (same session). |
-| `d`      |                                            | Detach from current session.                |
-|          | `tmux`                                     | Create a new session.                       |
-|          | `tmux [attach\|a] -t <SESSION_ID>`         | Attach to a specific session.               |
-|          | `tmux [list-sessions\|ls] -t <SESSION_ID>` | List created sessions.                      |
+| Shortcut | Command                                    | Description                                  |
+|----------|--------------------------------------------|----------------------------------------------|
+| `%`      |                                            | Create a new pane with vertical split.       |
+| `"`      |                                            | Create a new pane with horizontal split.     |
+| `Arrows` |                                            | Switch between existing panes (same window). |
+| `x`      |                                            | Kill the current pane.                       |
+| `,`      |                                            | Rename the current window                    |
+| `n`      |                                            | Move to the next window (same session).      |
+| `p`      |                                            | Move to the previous window (same session).  |
+| `d`      |                                            | Detach from current session.                 |
+|          | `tmux`                                     | Create a new session.                        |
+|          | `tmux [attach\|a] -t <SESSION_ID>`         | Attach to a specific session.                |
+|          | `tmux [list-sessions\|ls] -t <SESSION_ID>` | List created sessions.                       |
