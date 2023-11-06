@@ -53,3 +53,20 @@ tmux
 Tmux adopts a 0-based approach almost everywhere.
 Session is one of those concepts.
 So the first created session will be identified by 0.
+
+
+###### Important: For all the Shortcuts bellow, make sure your run them after typing the prefix `Ctrl + b`
+
+| Shortcut | Command                                    | Description                                 |
+|----------|--------------------------------------------|---------------------------------------------|
+| `%`      |                                            | Create new pane with vertical split.        |
+| `"`      |                                            | Create new pane with horizontal split.      |
+| `Arrows` |                                            | Switch between panes.                       |
+| `x`      |                                            | Kill the current pane.                      |
+| `,`      |                                            | Rename the current window                   |
+| `n`      |                                            | Move to the next window (same session).     |
+| `p`      |                                            | Move to the previous window (same session). |
+| `d`      |                                            | Detach from current session.                |
+|          | `tmux`                                     | Create a new session.                       |
+|          | `tmux [attach\|a] -t <SESSION_ID>`         | Attach to a specific session.               |
+|          | `tmux [list-sessions\|ls] -t <SESSION_ID>` | List created sessions.                      |
