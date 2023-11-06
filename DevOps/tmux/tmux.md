@@ -26,4 +26,10 @@ which tmux
 command -v tmux
 ```
 
-By default, the package is not installed, if that's the case for you, the output will be empty.
+By default, the package is not installed, if that's the case for you, the output will be empty,
+or instead you got a message like "no tmux ...".
+
+#### install tmux
+```bash
+[apt|dnf|yum|<YOUR_PACKAGE_MANAGER>] install -y tmux
+```
