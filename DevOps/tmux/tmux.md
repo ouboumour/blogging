@@ -69,6 +69,7 @@ So the first created session will be identified by 0.
 | `s`      |                                          | Switch quickly between sessions.                             | 
 | `d`      |                                          | Detach from current session without killing the session.     |
 |          | `tmux [attach\|a] -t <SESSION_ID>`       | Attach to a specific session.                                |
+|          | `tmux [list-windows\|lsw]`               | List created windows.                                        |
 | `c`      | `tmux new-window `                       | Create a new window.                                         |
 | `,`      | `tmux rename-window <NEW_WINDOW_NAME>`   | Rename the current window.                                   |
 | `n`      |                                          | Move to the next window (same session).                      |
