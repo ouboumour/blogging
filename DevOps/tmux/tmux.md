@@ -61,24 +61,25 @@ So the first created session will be identified by 0.
 
 ###### Important: For all the Shortcuts bellow, make sure you run them after typing the tmux prefix key `Ctrl + b`
 
-| Shortcut | Command                                  | Description                                                  |
-|----------|------------------------------------------|--------------------------------------------------------------|
-|          | `tmux [list-sessions\|ls]`               | List created sessions.                                       |
-|          | `tmux`                                   | Create a new session.                                        |
-| `$`      | `tmux rename-session <NEW_SESSION_NAME>` | Rename the current session.                                  |
-| `s`      |                                          | Switch quickly between sessions.                             | 
-| `d`      |                                          | Detach from current session without killing the session.     |
-|          | `tmux [attach\|a] -t <SESSION_ID>`       | Attach to a specific session.                                |
-|          | `tmux [list-windows\|lsw]`               | List created windows.                                        |
-| `c`      | `tmux new-window `                       | Create a new window.                                         |
-| `,`      | `tmux rename-window <NEW_WINDOW_NAME>`   | Rename the current window.                                   |
-| `n`      |                                          | Move to the next window (same session).                      |
-| `p`      |                                          | Move to the previous window (same session).                  |
-| `w`      |                                          | Switch quickly between windows (even in different sessions). | 
-|          | `tmux [list-panes\|lsp]`                 | List created panes.                                          |
-| `%`      |                                          | Create a new pane with vertical split.                       |
-| `"`      |                                          | Create a new pane with horizontal split.                     |
-| `Arrows` |                                          | Switch between existing panes (same window).                 |
-| `x`      |                                          | Kill the current pane.                                       |
+| Shortcut | Command                                                       | Description                                                  |
+|----------|---------------------------------------------------------------|--------------------------------------------------------------|
+|          | `tmux [list-sessions\|ls]`                                    | List created sessions.                                       |
+|          | `tmux`, `tmux new -s <NEW_SESSION_NAME> -n <NEW_WINDOW_NAME>` | Create a new session.                                        |
+| `$`      | `tmux rename-session <NEW_SESSION_NAME>`                      | Rename the current session.                                  |
+| `s`      |                                                               | Switch quickly between sessions.                             | 
+| `d`      |                                                               | Detach from current session without killing the session.     |
+|          | `tmux [attach\|a] -t <SESSION_ID>`                            | Attach to a specific session.                                |
+|          | `tmux [list-windows\|lsw]`                                    | List created windows.                                        |
+| `c`      | `tmux new-window `                                            | Create a new window.                                         |
+| `,`      | `tmux rename-window <NEW_WINDOW_NAME>`                        | Rename the current window.                                   |
+| `n`      |                                                               | Move to the next window (same session).                      |
+| `p`      |                                                               | Move to the previous window (same session).                  |
+| `w`      |                                                               | Switch quickly between windows (even in different sessions). | 
+|          | `tmux [list-panes\|lsp]`                                      | List created panes.                                          |
+| `%`      |                                                               | Create a new pane with vertical split.                       |
+| `"`      |                                                               | Create a new pane with horizontal split.                     |
+| `Arrows` |                                                               | Switch between existing panes (same window).                 |
+| `x`      |                                                               | Kill the current pane.                                       |
+| `t`      |                                                               | Display time in the current pane.                            |
 
 For more useful commands, take a look at [tmuxcheatsheet](https://tmuxcheatsheet.com/).
