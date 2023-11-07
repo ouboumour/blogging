@@ -191,3 +191,8 @@ set -g status-left-length 50
 set -g status-left "#[bg=colour35]💻#[fg=colour234,bold] #H#[bg=colour34]#[bg=colour35,nobold]#[fg=colour234] [#S] $tmux_target_lower"
 set -g status-right '#[bg=colour35] 🕔 #[fg=colour234,bold]%H:%M '
 ```
+
+###### Note
+I personally prefer to keep the default config, The only thing that I recommend changing though is adding the line bellow.
+`set -g status-left-length 40 # could be any number`   
+It reserves more space for the session name. 
