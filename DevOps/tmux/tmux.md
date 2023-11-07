@@ -75,6 +75,7 @@ So the first created session will be identified by 0.
 | `n`      |                                          | Move to the next window (same session).                      |
 | `p`      |                                          | Move to the previous window (same session).                  |
 | `w`      |                                          | Switch quickly between windows (even in different sessions). | 
+|          | `tmux [list-panes\|lsp]`                 | List created panes.                                          |
 | `%`      |                                          | Create a new pane with vertical split.                       |
 | `"`      |                                          | Create a new pane with horizontal split.                     |
 | `Arrows` |                                          | Switch between existing panes (same window).                 |
