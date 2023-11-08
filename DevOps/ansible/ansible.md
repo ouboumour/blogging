@@ -32,3 +32,9 @@ In addition, you'll need a `control | workstation | master` host, the instance t
 3. Create **two** SSH key pairs:
    1. The first one with the default path/name **with a passphrase**, then copy it to each server.  
    2. The second one with the `_ansible` prefix **without a passphrase**, then copy it to each server.
+
+#### 3. Collaboration
+Ansible is based on the called `playbooks` files.
+They describe some automation tasks that we can run against the target servers.
+It may be a good idea,
+especially if you are not the only one working on those files to share it on a VCS Hosting Solution like `github`.
