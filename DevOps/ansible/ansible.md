@@ -38,3 +38,20 @@ Ansible is based on the called `playbooks` files.
 They describe some automation tasks that we can run against the target servers.
 It may be a good idea,
 especially if you are not the only one working on those files to share it on a VCS Hosting Solution like `github`.
+
+### 4. Install Ansible (Tested on Ubuntu)
+###### Debian-based Distros
+```bash
+apt install -y ansible
+```
+###### RPM-based Distros (Tested on CentOS)
+Install Pip
+```bash
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+```
+```bash
+python3 get-pip.py --user
+```
+```bash
+python3 -m pip install --user ansible
+```
