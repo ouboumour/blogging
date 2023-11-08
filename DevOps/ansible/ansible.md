@@ -55,3 +55,6 @@ python3 get-pip.py --user
 ```bash
 python3 -m pip install --user ansible
 ```
+
+For more details,
+visit the [official website](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html).
