@@ -39,7 +39,7 @@ They describe some automation tasks that we can run against the target servers.
 It may be a good idea,
 especially if you are not the only one working on those files to share it on a VCS Hosting Solution like `github`.
 
-### 4. Install Ansible
+### 4. Install Ansible on the workstation only
 ###### Debian-based Distros (Tested on Ubuntu)
 ```bash
 apt install -y ansible
