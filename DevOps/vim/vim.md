@@ -31,11 +31,18 @@ apt install vim
 
 ## Hands-On
 
+### Vim modes
+When editing inside Vim, you'll be using one of the three-vim modes at a time:
+1. `Normal Mode` The default one that you are in each time you open vim.
+2. `Insert Mode` You can access it from Normal Mode (See [Vim Shortcuts](#vim-shortcuts) Section)
+3. `Command mode` You can access it from Normal Mode by typing first the prefix `:`(See [Vim Shortcuts](#vim-shortcuts) Section)
+
+### Vim Shortcuts
 | Shortcut | Start Mode | End Mode | Description                                                   |
 |----------|------------|----------|---------------------------------------------------------------|
-| `q`      | Command    | (Bash)   | Quit editor (clean file)                                      |
-| `w`      | Command    | (Bash)   | Save Changes                                                  |
-| `q!`     | Command    | (Bash)   | Discard changes & quit                                        |
 | `i`      | Normal     | Insert   | Start editing from the current cursor position                |
 | `a`      | Normal     | Insert   | Start editing from the current cursor position + 1 move right |
 | `A`      | Normal     | Insert   | Start editing from teh end of the current line                |
+| `w`      | Command    | (Bash)   | Save Changes                                                  |
+| `q`      | Command    | (Bash)   | Quit editor (clean file)                                      |
+| `q!`     | Command    | (Bash)   | Discard changes & quit                                        |
