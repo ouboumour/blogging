@@ -18,3 +18,13 @@ command -v vim
 which vim
 ```
 Both commands should return the binary path if Vim is installed and none if it's not.
+
+### Install Vim
+###### Debian-based Distros
+```bash
+apt install vim
+```
+###### RPM-based Distros 
+```bash
+[dnf|yum] install vim 
+```
