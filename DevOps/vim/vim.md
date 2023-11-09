@@ -28,3 +28,14 @@ apt install vim
 ```bash
 [dnf|yum] install vim 
 ```
+
+## Hands-On
+
+| Shortcut | Start Mode | End Mode | Description                                                    |
+|----------|------------|----------|----------------------------------------------------------------|
+| `q`      | Command    | (Bash)   | Quit editor (clean file)                                       |
+| `w`      | Command    | (Bash)   | Save Changes                                                   |
+| `w!`     | Command    | (Bash)   | Discard changes & quit                                         |
+| `i`      | Normal     | Insert   | Start editing from the current cursor position                 |
+| `a`      | Normal     | Insert   | Start editing from the current cursor position + 1 move right  |
+| `A`      | Normal     | Insert   | Start editing from end current line                            |
