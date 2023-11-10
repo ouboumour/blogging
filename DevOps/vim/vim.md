@@ -70,6 +70,7 @@ When editing inside Vim, you'll be using one of the many-vim modes at a time:
 | `%s/{pattern}/{string}/gi`                    | `Command`             | `Normal` | Substitute/Replace only first 'pattern' occurrence with 'string' on each line, i fag for case ignoring    |
 | `[split\|sp] <FILE_NAME>`                     | `Command`             | `Normal` | Open a side editor horizontally                                                                           |
 | `[vsplit\|vs] <FILE_NAME>`                    | `Command`             | `Normal` | Open a side editor vertically                                                                             |
+| `set number`                                  | `Command`             | `Normal` | Display line number at the left of each line                                                              |
 | `vim <FILE_NAME>`                             | (Bash)                | `Normal` | Open a file. If no file specified, an empty buffer will be added, you can name it later with `:w` command |
 | `vim +<LINE_NUMBER> <FILE_NAME>`              | (Bash)                | `Normal` | Open a file and place the cursor at a specific line                                                       |
 | `vim -o <FILE1_NAME> <FILE2_NAME>`            | (Bash)                | `Normal` | Open two files with horizontal split                                                                      |
