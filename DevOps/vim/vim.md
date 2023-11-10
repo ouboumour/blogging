@@ -56,6 +56,10 @@ When editing inside Vim, you'll be using one of the many-vim modes at a time:
 | `(Ctrl + w) + w`           | `Normal`              | `Normal` | Switch focus from pane to another                                                                       |
 | `r <FILE_NAME>`            | `Command`             | `Normal` | Append the specified file content to the current one                                                    |
 | `w <FILE_NAME>`            | `Command`             | `Normal` | Save Changes on the specified file, the current one if none specified. It creates the file if not exist |
+| `e <FILE_NAME>`            | `Command`             | `Normal` | Create a buffer from the specified file. It creates the file if not exist                               |
+| `enew`                     | `Command`             | `Normal` | Create a buffer from no file                                                                            |
+| `bn`                       | `Command`             | `Normal` | Switch to the next buffer                                                                               |
+| `bp`                       | `Command`             | `Normal` | Switch to the previous buffer                                                                           |
 | `esc`                      | `Command` \| `Insert` | `Normal` | Head back to Normal Mode                                                                                |
 | `[split\|sp] <FILE_NAME>`  | `Command`             | `Normal` | Open a side editor horizontally                                                                         |
 | `[vsplit\|vs] <FILE_NAME>` | `Command`             | `Normal` | Open a side editor vertically                                                                           |
