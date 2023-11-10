@@ -52,6 +52,8 @@ When editing inside Vim, you'll be using one of the many-vim modes at a time:
 | `X`                        | `Normal`              | `Normal` | Remove char from cursor left                                                                            |
 | `x`                        | `Normal`              | `Normal` | Remove char from cursor right                                                                           |
 | `dd`                       | `Normal`              | `Normal` | Cut the current line                                                                                    |
+| `y`                        | `Normal`              | `Normal` | Yank/Copy selected text with visual mode help                                                           |
+| `p`                        | `Normal`              | `Normal` | Put/Paste the copied text                                                                               |
 | `u`                        | `Normal`              | `Normal` | Undo the most recent change                                                                             |
 | `(Ctrl + w) + w`           | `Normal`              | `Normal` | Switch focus from pane to another                                                                       |
 | `r <FILE_NAME>`            | `Command`             | `Normal` | Append the specified file content to the current one                                                    |
