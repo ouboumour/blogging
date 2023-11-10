@@ -33,7 +33,7 @@ apt install vim
 
 ### Vim modes
 When editing inside Vim, you'll be using one of the many-vim modes at a time:
-1. ``Normal` Mode` The default one that you are in each time you open vim.
+1. `Normal Mode` The default one that you are in each time you open vim.
 2. `Insert Mode` You can access it from Normal Mode. (See [Vim Shortcuts](#vim-shortcuts) Section)
 3. `Command mode` You can access it from Normal Mode by typing first the prefix `:`. (See [Vim Shortcuts](#vim-shortcuts) Section)
 4. `Visual mode` You can access it from Normal Mode. (See [Vim Shortcuts](#vim-shortcuts) Section)
@@ -52,10 +52,12 @@ When editing inside Vim, you'll be using one of the many-vim modes at a time:
 | `X`                        | `Normal`              | `Normal` | Remove char from cursor left                                                                            |
 | `x`                        | `Normal`              | `Normal` | Remove char from cursor right                                                                           |
 | `dd`                       | `Normal`              | `Normal` | Cut the current line                                                                                    |
-| `y`                        | `Normal`              | `Normal` | Yank/Copy selected text with visual mode help                                                           |
+| `y`                        | `Normal`              | `Normal` | Yank/Copy selected text with visual mode help. The visual mode is cancelled automatically.              |
 | `p`                        | `Normal`              | `Normal` | Put/Paste the copied text                                                                               |
 | `u`                        | `Normal`              | `Normal` | Undo the most recent change                                                                             |
 | `(Ctrl + w) + w`           | `Normal`              | `Normal` | Switch focus from pane to another                                                                       |
+| `v`                        | `Normal`              | `Visual` | Switch to visual mode, mainly to select a text to be yanked/copied                                      |
+| `V`                        | `Normal`              | `Visual` | Switch to visual mode with the current line selected, mainly to select a text to be yanked/copied       |
 | `r <FILE_NAME>`            | `Command`             | `Normal` | Append the specified file content to the current one                                                    |
 | `w <FILE_NAME>`            | `Command`             | `Normal` | Save Changes on the specified file, the current one if none specified. It creates the file if not exist |
 | `e <FILE_NAME>`            | `Command`             | `Normal` | Create a buffer from the specified file. It creates the file if not exist                               |
