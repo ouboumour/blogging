@@ -35,7 +35,7 @@ apt install vim
 When editing inside Vim, you'll be using one of the many-vim modes at a time:
 1. `Normal Mode` The default one that you are in each time you open vim.
 2. `Insert Mode` You can access it from Normal Mode. (See [Vim Shortcuts](#vim-shortcuts) Section)
-3. `Command mode` You can access it from Normal Mode by typing first the prefix `:`. (See [Vim Shortcuts](#vim-shortcuts) Section)
+3. `Command mode` You can access it from Normal Mode mainly by typing first the prefix `:`. (See [Vim Shortcuts](#vim-shortcuts) Section)
 4. `Visual mode` You can access it from Normal Mode. (See [Vim Shortcuts](#vim-shortcuts) Section)
 
 ### Vim Shortcuts
@@ -68,6 +68,7 @@ When editing inside Vim, you'll be using one of the many-vim modes at a time:
 | `[range]s/{pattern}/{string}/[flags] [count]` | `Command`             | `Normal` | The general form of the substitute                                                                        |
 | `s/{pattern}/{string}/gi`                     | `Command`             | `Normal` | Substitute/Replace all 'pattern' occurrences with 'string' on each line, i fag for case ignoring          |
 | `%s/{pattern}/{string}/gi`                    | `Command`             | `Normal` | Substitute/Replace only first 'pattern' occurrence with 'string' on each line, i fag for case ignoring    |
+| `%{pattern}`                                  | `Command`             | `Normal` | Search for the matching text, you can type `n` to jump to the next occurrence                             |
 | `[split\|sp] <FILE_NAME>`                     | `Command`             | `Normal` | Open a side editor horizontally                                                                           |
 | `[vsplit\|vs] <FILE_NAME>`                    | `Command`             | `Normal` | Open a side editor vertically                                                                             |
 | `set number`                                  | `Command`             | `Normal` | Display line number at the left of each line                                                              |
