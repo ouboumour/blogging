@@ -7,14 +7,15 @@
 
 ## Hands-on
 
-#### Show file names inside the current directory
+#### Show file names inside a target path
 ```bash
-ls
+ls <TARGET_PATH>
 ```
 
-#### Show file names inside the current directory + metadata for each
+#### Show file names inside a target path + metadata for each
+#### Show file names inside a target path + metadata for each
 ```bash
-ls -l
+ls -l <TARGET_PATH>
 ```
 
 | drwxrwxr-x | 2          | ouss             | ouss         | 4096      | Nov 11 22:08           | dir1      |
@@ -30,3 +31,8 @@ With:
 `G` : Read, Write and execute permissions for **Group**
 
 `O` : Read, Write and execute permissions for **Others** (everyone else)
+
+#### Show hidden files
+```bash
+ls -a <TARGET_PATH>
+```
