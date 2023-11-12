@@ -49,3 +49,15 @@ ls -t <TARGET_PATH>
 ```bash
 ls -tr <TARGET_PATH>
 ```
+
+#### ls colors meaning
+On most used Linux distros, if not all of them, the ls command that we run is not the binary itself.
+It's actually an alias that you can show its value by running the command.   
+```bash
+alias ls
+```
+The output will look like follow : `alias ls='ls --color=auto'`.
+Which means
+it's the ls alias
+that runs behind the scenes the ls binary with color option to make sure we got colored output depending on the files
+(including directories) types.
