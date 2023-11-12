@@ -11,6 +11,7 @@
 ```bash
 ls <TARGET_PATH>
 ```
+By default, the ls output is alphabetically ordered.  
 
 #### Show file names inside a target path + metadata for each
 #### Show file names inside a target path + metadata for each
@@ -24,7 +25,7 @@ ls -l <TARGET_PATH>
 
 With:
 
-`?` : File type flag
+`?` : File type flag. `d` for directory, `-` for a file.
 
 `U` : Read, Write and execute permissions for **User**
 
