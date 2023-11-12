@@ -72,7 +72,7 @@ Below the list of colors displayed by the ls command, with the meaning of each:
 - `Red`: Archive file
 - `Red with a black background`: Broken link
 
-#### More
+#### Explore Aliases
 Since we talked about ls-aliases.
 There are more useful ones.
 The alias value may not be consistent depending on the Linux used Distro.
@@ -90,3 +90,7 @@ alias la='ls -A'
 alias ll='ls -alF'
 alias ls='ls --color=auto'
 ```
+
+#### Add Custom Aliases
+You can add your custom aliases, by adding your commands to the `~/bashrc` file.
+That way, you will not lose your created aliases once you close your session.
