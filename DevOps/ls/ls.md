@@ -71,3 +71,13 @@ Below the list of colors displayed by the ls command, with the meaning of each:
 - `Magenta` or `Pink`: Graphic image file
 - `Red`: Archive file
 - `Red with a black background`: Broken link
+
+#### More
+Since we talked about ls-aliases.
+There are more useful ones.
+The alias value may not be consistent depending on the Linux used Distro.
+
+To show all ls-aliases, you can run the command bellow
+```bash
+alias | grep ls
+```
