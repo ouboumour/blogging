@@ -61,3 +61,13 @@ Which means
 it's the ls alias
 that runs behind the scenes the ls binary with color option to make sure we got colored output depending on the files
 (including directories) types.
+
+Below the list of colors displayed by the ls command, with the meaning of each:
+
+- `Blue`: Directory or folders
+- `Green`: Executable or recognized data file
+- `Cyan` or `Sky Blue`: Symbolic link file
+- `Yellow with a black background`: Device
+- `Magenta` or `Pink`: Graphic image file
+- `Red`: Archive file
+- `Red with a black background`: Broken link
