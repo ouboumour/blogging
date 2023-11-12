@@ -37,3 +37,15 @@ With:
 ```bash
 ls -a <TARGET_PATH>
 ```
+
+#### Sort files by Last Modification Date
+
+###### Most recent to oldest
+```bash
+ls -t <TARGET_PATH>
+```
+
+###### Oldest to most recent
+```bash
+ls -tr <TARGET_PATH>
+```
