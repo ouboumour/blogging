@@ -81,3 +81,12 @@ To show all ls-aliases, you can run the command bellow
 ```bash
 alias | grep ls
 ```
+
+Bellow the output of the command executed against my ubuntu instance.
+
+```
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -alF'
+alias ls='ls --color=auto'
+```
