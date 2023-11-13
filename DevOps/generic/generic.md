@@ -24,9 +24,16 @@ such as its name, version, and related metadata.
 
 ## Users/Groups
 
-#### Create a user Without a password + Add to group
+#### Create a user without a password + Add to group
 The command bellows creates a group with the same name as the user implicitly.
 
 ```bash
 useradd <USER_NAME> -G <SUPPLEMENTARY_GROUPS>
+```
+
+#### Create a user with a password
+The command bellows creates a group with the same name as the user implicitly.
+
+```bash
+adduser <USER_NAME>
 ```
