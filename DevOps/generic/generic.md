@@ -12,3 +12,7 @@ to categorize and put in a more specific tutorial due to their little sizes, ...
 ```bash
 uname -a
 ```
+#### Get useful information about the Linux used Distro
+```bash
+cat /etc/os-release
+```
