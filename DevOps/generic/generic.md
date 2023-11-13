@@ -16,3 +16,8 @@ uname -a
 ```bash
 cat /etc/os-release
 ```
+###### Comparison
+In summary, uname -a provides more low-level and detailed information about the system,
+including kernel-related details,
+while cat /etc/os-release gives specific information about the operating system,
+such as its name, version, and related metadata.
