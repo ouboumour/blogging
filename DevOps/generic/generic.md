@@ -43,9 +43,16 @@ adduser <USER_NAME>
 usermod -aG <USER_NAME> <GROUP_NAME>
 ```
 
-#### Delete an existing user
+#### Delete an existing user (with the main group)
 ```bash
 userdel -r <USER_NAME>
 ```
 
-With `-r` to remove home directory and mail spool.
+With `-r` to remove home directory and mail spool located at `/var/mail/<USER_NAME>`.
+
+#### Delete an existing group
+```bash
+userdel -f <USER_NAME>
+```
+
+With `-f` to delete a group even if it is the primary group of a user.
