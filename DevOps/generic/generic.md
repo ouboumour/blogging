@@ -56,3 +56,8 @@ groupdel -f <USER_NAME>
 ```
 
 With `-f` to delete a group even if it is the primary group of a user.
+
+#### Set/Change password for an existing user
+```bash
+passwd <USER_NAME>
+```
