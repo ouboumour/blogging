@@ -70,3 +70,17 @@ su - <USER_NAME>
 Without the `-` sign, the command will try to connect under the home directory of the user you are connecting **from**.
 
 Otherwise, the command will try to connect under the home directory of the user you are connecting **to**.
+
+#### Switch to the root user
+
+You can either use the generic command as shown above. Otherwise, there are shorter options.
+
+###### Using su without specifying the root user
+```bash
+su -
+```
+
+###### Using sudo 
+```bash
+sudo -i
+```
