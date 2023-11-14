@@ -39,8 +39,13 @@ adduser <USER_NAME>
 ```
 
 #### Add an existing user to an existing group
-The command bellows creates a group with the same name as the user implicitly.
-
 ```bash
 usermod -aG <USER_NAME> <GROUP_NAME>
 ```
+
+#### Delete an existing user
+```bash
+userdel -r <USER_NAME>
+```
+
+With `-r` to remove home directory and mail spool.
