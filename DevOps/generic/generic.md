@@ -37,3 +37,10 @@ The command bellows creates a group with the same name as the user implicitly.
 ```bash
 adduser <USER_NAME>
 ```
+
+#### Add an existing user to an existing group
+The command bellows creates a group with the same name as the user implicitly.
+
+```bash
+usermod -aG <USER_NAME> <GROUP_NAME>
+```
