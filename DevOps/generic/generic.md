@@ -52,7 +52,7 @@ With `-r` to remove home directory and mail spool located at `/var/mail/<USER_NA
 
 #### Delete an existing group
 ```bash
-userdel -f <USER_NAME>
+groupdel -f <USER_NAME>
 ```
 
 With `-f` to delete a group even if it is the primary group of a user.
