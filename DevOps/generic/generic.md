@@ -61,3 +61,12 @@ With `-f` to delete a group even if it is the primary group of a user.
 ```bash
 passwd <USER_NAME>
 ```
+
+#### Switch to a specific user
+```bash
+su - <USER_NAME>
+```
+
+Without the `-` sign, the command will try to connect under the home directory of the user you are connecting **from**.
+
+Otherwise, the command will try to connect under the home directory of the user you are connecting **to**.
