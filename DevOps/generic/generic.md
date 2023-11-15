@@ -28,8 +28,14 @@ such as its name, version, and related metadata.
 The command bellows creates a group with the same name as the user implicitly.
 
 ```bash
-useradd <USER_NAME> -G <SUPPLEMENTARY_GROUPS>
+useradd <USER_NAME> -mG <SUPPLEMENTARY_GROUPS>
 ```
+
+With:
+
+`-m` to create the user's home directory.
+
+`-G` for supplementary groups.
 
 #### Create a user with a password
 The command bellows creates a group with the same name as the user implicitly.
@@ -75,12 +81,19 @@ Otherwise, the command will try to connect under the home directory of the user 
 
 You can either use the generic command as shown above. Otherwise, there are shorter options.
 
-###### Using su without specifying the root user
+###### Method 1: Using su without specifying the root user
 ```bash
 su -
 ```
 
-###### Using sudo 
+###### Method 2: Using sudo 
 ```bash
 sudo -i
 ```
+
+#### Add a user to sudoers
+
+###### Method 1: Editing `/etc/sudoers` file
+1. Open `/etc/sudoers` file with an editor
+2. Search for the line `root ALL=(ALL:ALL) ALL`
+3. Append bellow the next line `<USER_NAME> ALL=(ALL:ALL) ALL`
