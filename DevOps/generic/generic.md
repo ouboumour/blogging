@@ -125,4 +125,9 @@ wc -l <FILE_PATH>
 #### Count file words
 ```bash
 wc -w <FILE_PATH>
+```
+
+#### Count file characters including the EOL (End of Line) ones
+```bash
+wc -c <FILE_PATH>
 ``` 
