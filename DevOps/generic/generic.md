@@ -121,3 +121,8 @@ find <SUBTREE_ROOT_PATH> -n "<TARGET_FILE_PATTERN>"
 ```bash
 wc -l <FILE_PATH>
 ```
+
+#### Count file words
+```bash
+wc -w <FILE_PATH>
+``` 
