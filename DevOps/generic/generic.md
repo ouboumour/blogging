@@ -108,9 +108,16 @@ sudo -i
 usermod -aG sudo <USER_NAME>
 ```
 
-## Looking for a file/directory
+## Looking for a file (including directories)
 
 #### Get filepath from a name pattern
 ```bash
-find <SUBTREE_ROOT_PATH> -n "<TARGET_PATTERN>" 
+find <SUBTREE_ROOT_PATH> -n "<TARGET_FILE_PATTERN>" 
+```
+
+## Files counting
+
+#### Count file lines
+```bash
+wc -l <FILE_PATH>
 ```
