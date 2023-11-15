@@ -107,3 +107,10 @@ sudo -i
 ```bash
 usermod -aG sudo <USER_NAME>
 ```
+
+## Looking for a file/directory
+
+#### Get filepath from a name pattern
+```bash
+find <SUBTREE_ROOT_PATH> -n "<TARGET_PATTERN>" 
+```
