@@ -93,7 +93,12 @@ sudo -i
 
 #### Add a user to sudoers
 
-###### Method 1: Editing `/etc/sudoers` file
+###### Method 1: Editing `/etc/sudoers` file 
 1. Open `/etc/sudoers` file with an editor
 2. Search for the line `root ALL=(ALL:ALL) ALL`
 3. Append bellow the next line `<USER_NAME> ALL=(ALL:ALL) ALL`
+
+###### Method 2: Using `visudo` utility
+1. Open /etc/sudoers by typing `visudo`
+2. Search for the line `root ALL=(ALL:ALL) ALL`
+3. Append bellow the next line `< > ALL=(ALL:ALL) ALL`
