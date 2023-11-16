@@ -16,3 +16,20 @@ Here are some key points about sockets:
 4. **Listening and Connecting:** A socket can be in a listening state, waiting for incoming connections, or in a connected state, actively communicating with another socket.
 
 5. **Used in Networking Protocols:** Sockets are a fundamental concept in network programming and are used by various networking protocols such as TCP (Transmission Control Protocol) and UDP (User Datagram Protocol).
+
+## Check for listening socket on a specific port
+
+To check for listening sockets on a specific port
+and verify if a particular service is actively listening for incoming connections on a specific port.
+You can run the command bellow.
+```bash
+ss -tnl | grep <PORT_NUMBER>
+```
+
+With:
+
+`-t`: Filters results to only show TCP sockets.
+
+`-n`: Shows numerical addresses instead of resolving hostnames.
+
+`-l`: Displays only listening sockets.
