@@ -49,3 +49,8 @@ Make sure to run both commands, since it seems systemd ufw service and ufw utili
 ```bash
 ufw disable
 ```
+
+#### Allow specific incoming connection
+```bash
+ufw allow <PORT_NUMBER/[tcp|udp]?>
+```
