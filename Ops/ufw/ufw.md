@@ -21,3 +21,8 @@ which ufw
 ```
 
 By default, it's located at `/usr/sbin/ufw`.
+
+#### Install `ufw` package
+```bash
+[apt|dnf|yum|<YOUR_PACKAGE_MANAGER>] install -y ufw
+```
