@@ -59,3 +59,6 @@ ufw allow <PORT_NUMBER/[tcp|udp]?>
 ```bash
 ufw deny <PORT_NUMBER/[tcp|udp]?>
 ```
+
+#### Delete a rule
+sudo ufw delete [allow|deny] <PORT_NUMBER/[tcp|udp]?>
