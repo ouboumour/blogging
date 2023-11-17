@@ -26,3 +26,12 @@ By default, it's located at `/usr/sbin/ufw`.
 ```bash
 [apt|dnf|yum|<YOUR_PACKAGE_MANAGER>] install -y ufw
 ```
+
+## Hands-on
+#### Check ufw status
+```bash
+sudo ufw status
+```
+This command will show you the current status and list the rules that are in place.
+By default, ufw service is disabled.
+You can check tact using the `systemctl` utility. 
