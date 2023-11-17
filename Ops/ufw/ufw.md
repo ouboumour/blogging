@@ -54,3 +54,8 @@ ufw disable
 ```bash
 ufw allow <PORT_NUMBER/[tcp|udp]?>
 ```
+
+#### Deny specific incoming connection
+```bash
+ufw deny <PORT_NUMBER/[tcp|udp]?>
+```
