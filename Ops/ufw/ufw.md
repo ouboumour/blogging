@@ -34,7 +34,7 @@ ufw status
 ```
 This command will show you the current status and list the rules that are in place.
 
-#### Enable ufw service
+#### Enable the firewall
 
 By default, ufw service is disabled.
 Make sure to run both commands, since it seems systemd ufw service and ufw utility are not sync.
@@ -44,3 +44,8 @@ Make sure to run both commands, since it seems systemd ufw service and ufw utili
 2. ```bash
     ufw enable
    ```
+
+#### Disable the firewall
+```bash
+ufw disable
+```
