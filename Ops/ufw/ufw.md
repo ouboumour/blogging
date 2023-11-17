@@ -62,3 +62,10 @@ ufw deny <PORT_NUMBER/[tcp|udp]?>
 
 #### Delete a rule
 sudo ufw delete [allow|deny] <PORT_NUMBER/[tcp|udp]?>
+
+#### Application Profiles
+ufw also supports application profiles, making it easier to manage rules for specific services.
+###### Allow a service by a profile name
+```bash
+ufw allow <PROFILE_NAME>
+```
