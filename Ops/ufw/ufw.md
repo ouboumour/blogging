@@ -30,8 +30,17 @@ By default, it's located at `/usr/sbin/ufw`.
 ## Hands-on
 #### Check ufw status
 ```bash
-sudo ufw status
+ufw status
 ```
 This command will show you the current status and list the rules that are in place.
+
+#### Enable ufw service
+
 By default, ufw service is disabled.
-You can check tact using the `systemctl` utility. 
+Make sure to run both commands, since it seems systemd ufw service and ufw utility are not sync.
+1. ```bash
+    systemctl start ufw
+   ```
+2. ```bash
+    ufw enable
+   ```
