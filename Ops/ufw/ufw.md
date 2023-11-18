@@ -69,3 +69,7 @@ ufw also supports application profiles, making it easier to manage rules for spe
 ```bash
 ufw allow <PROFILE_NAME>
 ```
+###### List profile names
+```bash
+ufw app list
+```
