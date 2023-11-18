@@ -73,3 +73,11 @@ ufw allow <PROFILE_NAME>
 ```bash
 ufw app list
 ```
+
+#### Policies
+By default, ufw denies all incoming connections and allows all outgoing connections.
+You can change these defaults if needed:
+```bash
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+```
