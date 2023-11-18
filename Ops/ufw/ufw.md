@@ -52,13 +52,19 @@ ufw disable
 
 #### Allow specific incoming connection
 ```bash
-ufw allow <PORT_NUMBER/[tcp|udp]?>
+ufw allow <PORT_NUMBER>/<[tcp|udp]?>
+```
+
+#### Allow a range of ports for incoming connection
+```bash
+ufw allow <START_PORT_NUMBER>:<END_PORT_NUMBER>/<[tcp|udp]?>
 ```
 
 #### Deny specific incoming connection
 ```bash
 ufw deny <PORT_NUMBER/[tcp|udp]?>
 ```
+
 
 #### Delete a rule
 sudo ufw delete [allow|deny] <PORT_NUMBER/[tcp|udp]?>
