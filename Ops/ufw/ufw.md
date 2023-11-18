@@ -81,3 +81,9 @@ You can change these defaults if needed:
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 ```
+
+#### Resting policies
+To reset ufw to its default state (disable and delete all rules), you can use:
+```bash
+ufw reset
+```
