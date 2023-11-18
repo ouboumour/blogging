@@ -62,12 +62,16 @@ ufw allow <START_PORT_NUMBER>:<END_PORT_NUMBER>/<[tcp|udp]?>
 
 #### Deny specific incoming connection
 ```bash
-ufw deny <PORT_NUMBER/[tcp|udp]?>
+ufw deny <PORT_NUMBER>/<[tcp|udp]?>
 ```
 
-
 #### Delete a rule
-sudo ufw delete [allow|deny] <PORT_NUMBER/[tcp|udp]?>
+sudo ufw delete [allow|deny] <PORT_NUMBER>/<[tcp|udp]?>
+
+#### Reload the firewall rules
+```bash
+ufw reload
+```
 
 #### Application Profiles
 ufw also supports application profiles, making it easier to manage rules for specific services.
