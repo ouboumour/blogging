@@ -60,6 +60,11 @@ ufw allow <PORT_NUMBER>/<[tcp|udp]?>
 ufw allow <START_PORT_NUMBER>:<END_PORT_NUMBER>/<[tcp|udp]?>
 ```
 
+#### Allow specific incoming connection from a specific ip address
+```bash
+ufw allow from <IP_ADDRESS> to any port <PORT_NUMBER> proto <[tcp|udp]>
+```
+
 #### Deny specific incoming connection
 ```bash
 ufw deny <PORT_NUMBER>/<[tcp|udp]?>
