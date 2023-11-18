@@ -73,6 +73,10 @@ ufw allow <PROFILE_NAME>
 ```bash
 ufw app list
 ```
+###### Get Info about an application profile
+```bash
+ufw app info <PROFILE_NAME>
+```
 
 #### Policies
 By default, ufw denies all incoming connections and allows all outgoing connections.
