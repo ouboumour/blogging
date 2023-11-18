@@ -70,8 +70,18 @@ ufw allow from <IP_ADDRESS> to any port <PORT_NUMBER> proto <[tcp|udp]>
 ufw deny <PORT_NUMBER>/<[tcp|udp]?>
 ```
 
-#### Delete a rule
+#### Delete a rule by the rule itself
 sudo ufw delete [allow|deny] <PORT_NUMBER>/<[tcp|udp]?>
+
+#### Delete a rule by the rule number
+First, to get the rule number, run the command bellow. 
+```bash
+ufw status numbered
+```
+Delete the rule by its number.
+```bash
+ufw delete <RULE_NUMBER>
+```
 
 #### Reload the firewall rules
 ```bash
