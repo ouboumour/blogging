@@ -15,6 +15,13 @@ systemctl status postgresql
 systemctl enable postgresql
 systemctl start postgresql
 ```
+## PostgreSQL Configuration
+#### `/etc/postgresql/15/main/postgresql.conf` file
+Check/Uncomment/Change if needed the `listen_addresses` key's value.
+This parameter defines the network interfaces on which the PostgreSQL server will accept connection requests.
+By default, it is often set to `localhost` or `127.0.0.1`, limiting connections to the local machine.
+To allow connections from other machines,
+you would need to set it to the IP address of the network interface or use `*` to listen on all available interfaces.
 
 ## Create a simple Database for test
 1. Switch to postgres user
