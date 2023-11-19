@@ -2,7 +2,7 @@
 
 ## Install PostgreSQL
 ```bash
-[apt|dnf|yum|<YOUR_LINUX_DISTRO>] install -y postgreql
+[apt|dnf|yum|<YOUR_LINUX_DISTRO>] install -y postgresql
 ```
 
 ## Check the PostgreSQL service
@@ -22,6 +22,10 @@ This parameter defines the network interfaces on which the PostgreSQL server wil
 By default, it is often set to `localhost` or `127.0.0.1`, limiting connections to the local machine.
 To allow connections from other machines,
 you would need to set it to the IP address of the network interface or use `*` to listen on all available interfaces.
+
+#### `/etc/postgresql/15/main/pg_hba.conf` file
+Add the line `host   all   all   <CLIENT_IP_ADDRESS>/<CIDR_SUBNET_MASK>  md5`.
+This allows you to connect remotely to the database server from another host with the specified ip address.
 
 ## Create a simple Database for test
 1. Switch to postgres user
