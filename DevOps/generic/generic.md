@@ -6,9 +6,9 @@ It's gonna act as a temporary (or not)
 container for all those useful hints / commands that I find kind of hard
 to categorize and put in a more specific tutorial due to their little sizes, ...
 
-## Get Information about the current used OS
+## Retrieve system information
 
-#### Get useful information about the specific flavor of the OS and its kernel
+#### Displays system information, including the kernel version
 ```bash
 uname -a
 ```
@@ -16,6 +16,12 @@ uname -a
 ```bash
 cat /etc/os-release
 ```
+
+#### Shows disk space usage in a human-readable format
+```bash
+df -h
+```
+
 ###### Comparison
 In summary, `uname -a` provides more low-level and detailed information about the system,
 including kernel-related details,
@@ -130,4 +136,4 @@ wc -w <FILE_PATH>
 #### Count file characters including the EOL (End of Line) ones
 ```bash
 wc -c <FILE_PATH>
-``` 
+```
