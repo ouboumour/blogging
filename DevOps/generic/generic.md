@@ -17,21 +17,26 @@ uname -a
 cat /etc/os-release
 ```
 
-#### Shows disk space usage in a human-readable format
-```bash
-df -h
-```
-
-#### Displays the amount of free and used memory in megabytes
-```bash
-free -m
-```
-
 ###### Comparison
 In summary, `uname -a` provides more low-level and detailed information about the system,
 including kernel-related details,
 while `cat /etc/os-release` gives specific information about the operating system,
 such as its name, version, and related metadata.
+
+#### Shows disk space usage in a human-readable format
+```bash
+df -h
+```
+
+#### Displays the amount of free and used memory
+```bash
+free -m
+```
+
+#### Provides system uptime information
+```bash
+uptime
+```
 
 ## Users/Groups
 
