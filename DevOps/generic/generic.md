@@ -22,6 +22,11 @@ cat /etc/os-release
 df -h
 ```
 
+#### Displays the amount of free and used memory in megabytes
+```bash
+free -m
+```
+
 ###### Comparison
 In summary, `uname -a` provides more low-level and detailed information about the system,
 including kernel-related details,
