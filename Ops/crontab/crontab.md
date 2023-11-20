@@ -18,7 +18,7 @@ Each asterisk `*` represents a different time unit:
 ## Editing the Cron Table
 1. Open the crontab editor by running the following command:
     ```bash
-    crontab -e 
+    crontab -e -u <USER_NAME>
     ```
     If this is your first time, you might be prompted to choose an editor. Select your preferred editor (nano, vim, etc.).
 2. Add a new line for your cron job. Use the cron syntax mentioned earlier.
@@ -42,3 +42,13 @@ Bellow some examples:
 */15 * * * * /path/to/your/script.sh
 ```
 -`*/15`: Every 15 minutes (0-59)
+
+## Common Cron Commands
+#### List your current cron jobs
+```bash
+crontab -l
+```
+#### Remove all your current cron jobs
+```bash
+crontab -r
+```
