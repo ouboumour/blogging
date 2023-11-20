@@ -22,3 +22,23 @@ Each asterisk `*` represents a different time unit:
     ```
     If this is your first time, you might be prompted to choose an editor. Select your preferred editor (nano, vim, etc.).
 2. Add a new line for your cron job. Use the cron syntax mentioned earlier.
+
+## Hands-on
+Bellow some examples:
+
+#### Run a script every day at 2 AM
+```bash
+0 2 * * * /path/to/your/script.sh
+```
+- `0`: Minute (0-59)
+- `2`: Hour (0-23)
+#### Run a script every Monday at 8 PM
+```bash
+0 20 * * 1 /path/to/your/script.sh
+```
+- `1`: Monday (0-6, Sunday to Saturday)
+#### Run a script every 15 minutes
+```bash
+*/15 * * * * /path/to/your/script.sh
+```
+-`*/15`: Every 15 minutes (0-59)
