@@ -38,3 +38,9 @@ lsof -p <PID>
 ```bash
 lsof -i
 ```
+
+#### List open Files for a specific User
+```bash
+lsof -u <username>
+```
+
