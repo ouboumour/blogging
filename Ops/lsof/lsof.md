@@ -58,3 +58,14 @@ lsof -t
 ```bash
 lsof -t -i:<PORT_NUMBER>
 ```
+
+#### List Files in a Specific Directory
+```bash
+lsof /path/to/directory
+```
+
+#### List Network Connections
+```bash
+lsof -i -n
+```
+The `-n` option prevents the conversion of IP addresses to hostnames. 
