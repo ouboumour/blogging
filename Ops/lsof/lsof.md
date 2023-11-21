@@ -44,3 +44,7 @@ lsof -i
 lsof -u <username>
 ```
 
+#### List Files for a Specific Command
+```bash
+lsof -c <command>
+```
