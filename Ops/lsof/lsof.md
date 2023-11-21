@@ -48,3 +48,13 @@ lsof -u <username>
 ```bash
 lsof -c <command>
 ```
+
+#### List Process IDs Only
+```bash
+lsof -t
+```
+
+#### List Process IDs for a listening port
+```bash
+lsof -t -i:<PORT_NUMBER>
+```
