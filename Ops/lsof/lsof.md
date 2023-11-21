@@ -33,3 +33,8 @@ This command will display information about all open files on the system.
 ```bash
 lsof -p <PID>
 ```
+
+#### List Internet Sockets
+```bash
+lsof -i
+```
