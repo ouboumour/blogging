@@ -20,3 +20,16 @@ lsof [options]
 - `-c`: Lists files for a specific command.
 - `-t`: Outputs only the process IDs.
 - `-F`: Specifies the output format.
+
+## Hands-on
+
+#### List All Open Files
+```bash
+lsof
+```
+This command will display information about all open files on the system.
+
+#### List Files for a Specific Process
+```bash
+lsof -p <PID>
+```
