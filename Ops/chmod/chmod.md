@@ -74,7 +74,7 @@ chmod [u|g|o]-[r|w|x] <FILENAME>
 ```
 
 #### Setting exact Permissions
-
-```bash
-chmod [u|g|o]=[r|w|x] <FILENAME> 
-```
+1. Using the `=` sign
+   ```bash
+   chmod [u|g|o]=[r|w|x] <FILENAME> 
+   ```
