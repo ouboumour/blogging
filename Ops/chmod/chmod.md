@@ -78,3 +78,14 @@ chmod [u|g|o]-[r|w|x] <FILENAME>
    ```bash
    chmod [u|g|o]=[r|w|x] <FILENAME> 
    ```
+2. Using Numeric Representation
+   ```bash
+   chmod <><><> filename
+   ```
+   with:
+
+   - `4`: for `r` 
+   - `2`: for `w` 
+   - `1`: for `x`
+   
+   The values are added together, by each entity (owner, group, others), to create the desired permission combination.
