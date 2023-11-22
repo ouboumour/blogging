@@ -61,3 +61,9 @@ Permissions:
    To be fair, this last command result depends on the `umask` value (usually set to the value `0002`.
    If that's the case for you, the command will not set write permissions for others. More explanation [here](https://unix.stackexchange.com/questions/429421/why-does-chmod-w-not-give-write-permission-to-othero).
     So yeah, to make it simpler for you, I do going with the command that comes just before by adding the `ugo` part.
+
+#### Removing Permissions
+
+```bash
+chmod [u|g|o]-[r|w|x] <FILENAME> 
+```
