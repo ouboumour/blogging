@@ -51,19 +51,30 @@ Permissions:
     ```
 
 4. To add permissions for all at once
-   ```bash
-    chmod ugo+[r|w|x] <FILENAME>
-    ```
-    OR 
-    ```bash
-    chmod +[r|w|x] <FILENAME> 
-   ```
-   To be fair, this last command result depends on the `umask` value (usually set to the value `0002`.
-   If that's the case for you, the command will not set write permissions for others. More explanation [here](https://unix.stackexchange.com/questions/429421/why-does-chmod-w-not-give-write-permission-to-othero).
-    So yeah, to make it simpler for you, I do going with the command that comes just before by adding the `ugo` part.
+   1. Add diff permissions for different groups
+      ```bash
+       chmod u[r|w|x],g[r|w|x],o[r|w|x] <FILENAME>
+       ```
+   2. Add same permissions for different groups 
+      ```bash
+       chmod ugo+[r|w|x] <FILENAME>
+       ```
+       OR 
+       ```bash
+       chmod +[r|w|x] <FILENAME> 
+      ```
+      To be fair, this last command result depends on the `umask` value (usually set to the value `0002`.
+      If that's the case for you, the command will not set write permissions for others. More explanation [here](https://unix.stackexchange.com/questions/429421/why-does-chmod-w-not-give-write-permission-to-othero).
+       So yeah, to make it simpler for you, I do going with the command that comes just before by adding the `ugo` part.
 
 #### Removing Permissions
 
 ```bash
 chmod [u|g|o]-[r|w|x] <FILENAME> 
+```
+
+#### Setting exact Permissions
+
+```bash
+chmod [u|g|o]=[r|w|x] <FILENAME> 
 ```
