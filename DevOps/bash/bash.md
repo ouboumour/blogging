@@ -26,3 +26,10 @@ Let's start with a simple "Hello, World!" script.
 #!/bin/bash
 echo "Hello, World!"
 ```
+
+### 4. Make the Script Executable
+In the terminal, navigate to the directory containing your script and make it executable.
+
+```bash
+chmod +x myscript.sh
+```
