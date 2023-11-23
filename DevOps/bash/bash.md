@@ -19,3 +19,10 @@ Start your script with a shebang line, which tells the system to interpret the s
 ```
 #!/bin/bash
 ```
+
+### 3. Write Your First Script
+Let's start with a simple "Hello, World!" script.
+```bash
+#!/bin/bash
+echo "Hello, World!"
+```
