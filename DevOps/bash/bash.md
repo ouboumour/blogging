@@ -13,3 +13,9 @@ Bash is a specific type of **shell**.
 
 Open your favorite text editor (e.g., `nano`, `vim`, `gedit`, ...) and create a new file with a `.sh` extension.
 For example, `myscript.sh`.
+
+### 2. Shebang Line
+Start your script with a shebang line, which tells the system to interpret the script using Bash.
+```
+#!/bin/bash
+```
