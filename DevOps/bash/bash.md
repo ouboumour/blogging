@@ -40,3 +40,6 @@ Execute your script using `./` followed by the script name.
 ```bash
 ./myscript.sh
 ```
+
+###### Note: 
+You can also use the absolute path.
