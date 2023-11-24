@@ -62,3 +62,18 @@ echo "Enter your name:"
 read name
 echo "Hello, $name!"
 ```
+
+## Conditional Statements
+### If Statement
+Use an `if` statement for conditional execution.
+```bash
+#!/bin/bash
+echo "Enter a number:"
+read num
+
+if [ $num -gt 10 ]; then
+  echo "The number is greater than 10."
+else
+  echo "The number is 10 or less."
+fi
+```
