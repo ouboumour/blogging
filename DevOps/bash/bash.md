@@ -117,3 +117,17 @@ You can use/call the function above and pass arguments as follows.
 greet "Alice"
 greet "Bob"
 ```
+
+## Command Line Arguments
+
+Access command line arguments using `$1`, `$2`, etc.
+```bash
+#!/bin/bash
+echo "First argument: $1"
+echo "Second argument: $2"
+```
+
+Run the script with arguments:
+```bash
+./myscript.sh arg1 arg2
+```
