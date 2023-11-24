@@ -53,3 +53,12 @@ Use variables to store and manipulate data.
 greeting="Hello"
 echo $greeting
 ```
+
+### User Input
+Read user input using the `read` command.
+```bash
+#!/bin/bash
+echo "Enter your name:"
+read name
+echo "Hello, $name!"
+```
