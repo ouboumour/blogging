@@ -77,3 +77,17 @@ else
   echo "The number is 10 or less."
 fi
 ```
+
+## Loops
+
+###  While Loop
+Use a `while` loop for repeated execution.
+```bash
+#!/bin/bash
+count=1
+
+while [ $count -le 5 ]; do
+  echo "Count: $count"
+  ((count++))
+done
+```
