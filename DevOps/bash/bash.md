@@ -43,3 +43,13 @@ Execute your script using `./` followed by the script name.
 
 ###### Note: 
 You can also use the absolute path.
+
+## Variables and User Input
+
+### Variables
+Use variables to store and manipulate data.
+```bash
+#!/bin/bash
+greeting="Hello"
+echo $greeting
+```
