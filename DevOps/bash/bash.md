@@ -91,3 +91,12 @@ while [ $count -le 5 ]; do
   ((count++))
 done
 ```
+
+### For Loop
+Use a `for` loop for iterating over a range or a list.
+```bash
+#!/bin/bash
+for i in {1..5}; do
+  echo "Number: $i"
+done
+```
