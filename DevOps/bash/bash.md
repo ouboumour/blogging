@@ -100,3 +100,13 @@ for i in {1..5}; do
   echo "Number: $i"
 done
 ```
+
+## Functions
+
+### Define/Declare a function
+```bash
+#!/bin/bash
+function greet {
+  echo "Hello, $1!"
+}
+```
