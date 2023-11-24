@@ -110,3 +110,10 @@ function greet {
   echo "Hello, $1!"
 }
 ```
+
+### Call a function
+You can use/call the function above and pass arguments as follows. 
+```
+greet "Alice"
+greet "Bob"
+```
