@@ -181,3 +181,8 @@ ifconfig
 hostname -I
 ```
 
+## Download resource from the Internet
+#### Using `wget`
+```bash
+wget <RESOURCE_URL>
+```
