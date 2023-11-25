@@ -176,3 +176,8 @@ ip a
 ifconfig
 ```
 
+#### Using `hostname`
+```bash
+hostname -I
+```
+
