@@ -171,3 +171,8 @@ wc -c <FILE_PATH>
 ip a
 ```
 
+#### Using `ifconfig`
+```bash
+ifconfig
+```
+
