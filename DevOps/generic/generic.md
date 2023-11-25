@@ -134,8 +134,15 @@ find <SUBTREE_ROOT_PATH> -n "<TARGET_FILE_PATTERN>"
 ## Files counting
 
 #### Count file lines
+
+###### Using wc
 ```bash
 wc -l <FILE_PATH>
+```
+
+###### using nl
+```bash
+nl <FILE_PATH>
 ```
 
 #### Count file words
@@ -147,3 +154,4 @@ wc -w <FILE_PATH>
 ```bash
 wc -c <FILE_PATH>
 ```
+
