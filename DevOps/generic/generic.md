@@ -186,3 +186,8 @@ hostname -I
 ```bash
 wget <RESOURCE_URL>
 ```
+
+#### Using `curl`
+```bash
+curl -O <RESOURCE_URL>
+```
