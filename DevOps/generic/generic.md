@@ -38,6 +38,11 @@ free -m
 uptime
 ```
 
+#### Display the username
+```bash
+whoami
+```
+
 #### Display the hostname
 ```bash
 hostname
