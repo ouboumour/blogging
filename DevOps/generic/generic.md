@@ -165,3 +165,9 @@ wc -w <FILE_PATH>
 wc -c <FILE_PATH>
 ```
 
+## Get Instance LAN IP Address
+#### Using `ip`
+```bash
+ip a
+```
+
