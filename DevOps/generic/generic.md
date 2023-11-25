@@ -38,6 +38,11 @@ free -m
 uptime
 ```
 
+#### Display the hostname
+```bash
+hostname
+```
+
 ## Users/Groups
 
 #### Create a user without a password + Add to group
