@@ -61,4 +61,4 @@ jobs:
           path: artifacts
 
       - name: Unzip and deploy artifact
-        run: sudo unzip -o artifacts/${{ env.ARTIFACT }} -d /var/www/html
+        run: unzip -o artifacts/${{ env.ARTIFACT }} -d /var/www/html
