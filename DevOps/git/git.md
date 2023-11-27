@@ -30,3 +30,10 @@ apt install -y git
 ```bash
 Init a git repo
 ```
+
+### Setup Min Config
+#### Repo Scope (~/.git/config)
+```bash
+git config user.name "Your Name"
+git config user.email "youremail@yourdomain.com"
+```
