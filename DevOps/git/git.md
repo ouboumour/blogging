@@ -24,3 +24,9 @@ apt install -y git
 ```bash
 [yum|dnf] install -y git
 ```
+
+## Hands-on
+### Init a git repo
+```bash
+Init a git repo
+```
