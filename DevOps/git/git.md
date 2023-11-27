@@ -32,8 +32,14 @@ Init a git repo
 ```
 
 ### Setup Min Config
-#### Repo Scope (~/.git/config)
+#### Repo Scope (<repo_path>/.git/config)
 ```bash
 git config user.name "Your Name"
 git config user.email "youremail@yourdomain.com"
+```
+
+#### user Scope (~/.gitconfig)
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "youremail@yourdomain.com"
 ```
