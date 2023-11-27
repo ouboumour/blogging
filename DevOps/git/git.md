@@ -15,7 +15,12 @@ which git
 both should return the binary path if the package is installed, otherwise it means it's not installed.
 
 ### Install git
-#### Debian-based Linux distros 
+#### Debian-based Linux distros
 ```bash
 apt install -y git
+```
+
+#### RPM-based Linux distros
+```bash
+[yum|dnf] install -y git
 ```
