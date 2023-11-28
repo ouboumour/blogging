@@ -22,12 +22,16 @@ jobs:
           artifact: ${{ env.ARTIFACT }}
           docker-version: ${{ env.DOCKER_VERSION }}
 
+      - name: Remove footers from HTML Files
+        run: sudo ./.github/scripts/remove_jetbrains_footers.sh ${{ env.ARTIFACT }}
+
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: docs
           path: |
             artifacts/${{ env.ARTIFACT }}
+            artifacts/report.html
             artifacts/report.json
           retention-days: 7
 
@@ -61,4 +65,7 @@ jobs:
           path: artifacts
 
       - name: Unzip and deploy artifact
-        run: unzip -o artifacts/${{ env.ARTIFACT }} -d /var/www/html
+        run: |
+          unzip artifacts/${{ env.ARTIFACT }} -d /tmp/artifacts
+          rsync -av --delete /tmp/artifacts/ /var/www/html/
+          rm -r /tmp/artifacts
