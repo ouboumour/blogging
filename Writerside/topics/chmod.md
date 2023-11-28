@@ -14,3 +14,20 @@ These permissions can be assigned to three entities:
 - owner
 - group
 - others
+
+## Basic Syntax
+
+```bash
+chmod <OPTIONS> <PERMISSIONS> <FILE>
+```
+
+Options:
+- `+`: Adds the specified permission.
+- `-`: Removes the specified permission.
+- `=`: Sets the specified permission and removes others.
+
+Permissions:
+
+- `r`: Read permission.
+- `w`: Write permission.
+- `x`: Execute permission.
