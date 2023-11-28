@@ -7,6 +7,7 @@
                  start-page="starter-topic.md">
 
     <toc-element topic="starter-topic.md"/>
+    <toc-element topic="ufw.md"/>
     <toc-element topic="crontab.md"/>
     <toc-element topic="socket.md"/>
     <toc-element topic="lsof.md"/>
