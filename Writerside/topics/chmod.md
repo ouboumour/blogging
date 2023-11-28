@@ -61,7 +61,7 @@ Permissions:
         ```
        OR
         ```bash
-        chmod +[r|w|x] <FILENAME> 
+        chmod +[r|w|x] <FILENAME>
        ```
        To be fair, this last command result depends on the `umask` value (usually set to the value `0002`.
        If that's the case for you, the command will not set write permissions for others. More explanation [here](https://unix.stackexchange.com/questions/429421/why-does-chmod-w-not-give-write-permission-to-othero).
@@ -70,17 +70,17 @@ Permissions:
 #### Removing Permissions
 
 ```bash
-chmod [u|g|o]-[r|w|x] <FILENAME> 
+chmod [u|g|o]-[r|w|x] <FILENAME>
 ```
 
 #### Setting exact Permissions
 1. Using the `=` sign
    ```bash
-   chmod [u|g|o]=[r|w|x] <FILENAME> 
+   chmod [u|g|o]=[r|w|x] <FILENAME>
    ```
 2. Using Numeric Representation
    ```bash
-   chmod <owner_sum><group_sum><others_sum> filename
+   chmod <owner_sum><group_sum><others_sum> <FILENAME>
    ```
    with:
 
