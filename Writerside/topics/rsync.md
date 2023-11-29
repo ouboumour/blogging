@@ -62,6 +62,8 @@ With:
 
 `-z`: compress file data during the transfer for faster one.
 
+`--delete`: delete extraneous files from destination dirs. 
+
 ###### Note: {id="note_1"}
 **rsync** command options are alluring, for an exhaustive list uses the `--help` option.
 
