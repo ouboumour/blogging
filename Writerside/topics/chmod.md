@@ -1,4 +1,4 @@
-# Chmod
+# chmod
 
 ## Definition
 The `chmod` command in Linux is used to change the permissions of a file or directory.

@@ -1,4 +1,4 @@
-# Lsof
+# lsof
 
 ## Definition
 The `lsof` command stands for `list open files`.

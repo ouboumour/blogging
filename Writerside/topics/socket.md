@@ -1,4 +1,4 @@
-# Socket
+# socket
 
 ## Definition
 A **socket** refers to a software endpoint
