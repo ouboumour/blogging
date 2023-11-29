@@ -8,6 +8,7 @@
 
     <toc-element topic="starter-topic.md"/>
     <toc-element topic="ufw.md"/>
+    <toc-element topic="Install-Postgres-Server.md"/>
     <toc-element topic="chmod.md"/>
     <toc-element topic="crontab.md"/>
     <toc-element topic="socket.md"/>
