@@ -21,14 +21,15 @@ Here's how **rsync** typically works:
 
 #### Check if the rsync utility is available on both instances
 
-###### Method 1: using `which` utility
-```bash 
-which rsync
-```
-###### Method 2: using `command` utility
-```bash 
-command -v rsync
-```
+<tabs>
+    <tab title="Using command">
+        <code-block lang="bash">command -v rsync</code-block>
+    </tab>
+    <tab title="Using which">
+        <code-block lang="bash">which rsync</code-block>        
+    </tab>
+</tabs>
+
 Both should return the utility absolute path, usually located at **/usr/bin/rsync**.
 If that's not the case, you can install the package **rsync** using apt, dnf,
 yum or whatever your package manager is depending on your Linux distros.
