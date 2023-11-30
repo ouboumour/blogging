@@ -22,3 +22,18 @@ There are many types of unit files, and it's easy to differentiate between them 
 - *.socket
 - *.slice
 - ...
+
+## Systemclt
+The most common frequently used systemd command utility is **systemclt**.
+
+With the help of systemclt we can manage our services in a very user-friendly way.
+
+#### Start a Service
+```bash
+systemctl start <YOUR_SERVICE_NAME> 
+```
+
+#### Stop a Service
+```bash
+systemctl stop <YOUR_SERVICE_NAME>
+```
