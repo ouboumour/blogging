@@ -47,3 +47,8 @@ systemctl enable <YOUR_SERVICE_NAME>
 ```bash
 systemctl disable <YOUR_SERVICE_NAME>
 ```
+
+#### Check a Service Status
+```bash
+systemctl status <YOUR_SERVICE_NAME>
+```
