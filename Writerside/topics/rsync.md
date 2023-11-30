@@ -65,6 +65,7 @@ With:
 `--delete`: delete extraneous files from destination dirs. 
 
 > **rsync** command options are alluring, for an exhaustive list uses the `--help` option.
+> 
 {style="note"}
 
 
@@ -78,6 +79,7 @@ rsync -rv <LOCAL_FILE_PATH> <REMOTE_SERVER_USERNAME>@<REMOTE_SERVER_IP_ADDRESS>:
 >Like with scp command,
 you can flip the direction
 and copy files from the remote server to your local instance just by flipping the command args order.
+>
 {style="note"}
 
 ```bash
