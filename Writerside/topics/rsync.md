@@ -64,8 +64,9 @@ With:
 
 `--delete`: delete extraneous files from destination dirs. 
 
-###### Note: {id="note_1"}
-**rsync** command options are alluring, for an exhaustive list uses the `--help` option.
+> **rsync** command options are alluring, for an exhaustive list uses the `--help` option.
+{style="note"}
+
 
 #### Run rsync "for real"
 To transfer file for real, just get rid of the `--dry-run` or `-n` option.
@@ -74,10 +75,10 @@ To transfer file for real, just get rid of the `--dry-run` or `-n` option.
 rsync -rv <LOCAL_FILE_PATH> <REMOTE_SERVER_USERNAME>@<REMOTE_SERVER_IP_ADDRESS>:<REMOTE_SERVER_DIRECTORY_PATH> 
 ```
 
-###### Note: {id="note_2"}
-Like with scp command,
+>Like with scp command,
 you can flip the direction
 and copy files from the remote server to your local instance just by flipping the command args order.
+{style="note"}
 
 ```bash
 rsync -rv <REMOTE_SERVER_USERNAME>@<REMOTE_SERVER_IP_ADDRESS>:<REMOTE_SERVER_DIRECTORY_PATH> <LOCAL_FILE_PATH>
