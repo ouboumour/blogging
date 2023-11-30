@@ -63,3 +63,8 @@ systemctl restart <YOUR_SERVICE_NAME>
 systemctl reload <YOUR_SERVICE_NAME>
 ```
 
+#### Customize a Service by overriding the existing service file
+```bash
+systemctl edit <YOUR_SERVICE_FILE_NAME>.service
+```
+
