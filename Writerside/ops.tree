@@ -10,6 +10,7 @@
     <toc-element topic="ufw.md"/>
     <toc-element topic="Install-Postgres-Server.md"/>
     <toc-element topic="rsync.md"/>
+    <toc-element topic="systemd.md"/>
     <toc-element topic="chmod.md"/>
     <toc-element topic="crontab.md"/>
     <toc-element topic="socket.md"/>
