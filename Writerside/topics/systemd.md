@@ -52,3 +52,14 @@ systemctl disable <YOUR_SERVICE_NAME>
 ```bash
 systemctl status <YOUR_SERVICE_NAME>
 ```
+
+#### Restart a Service (stop and start with one command)
+```bash
+systemctl restart <YOUR_SERVICE_NAME>
+```
+
+#### Reload a Service (reload the process configuration files without stopping the service)
+```bash
+systemctl reload <YOUR_SERVICE_NAME>
+```
+
