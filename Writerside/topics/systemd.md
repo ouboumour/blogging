@@ -68,3 +68,12 @@ systemctl reload <YOUR_SERVICE_NAME>
 systemctl edit <YOUR_SERVICE_FILE_NAME>.service
 ```
 
+#### Customize a Service with a copy brand-new service file
+```bash
+systemctl edit --full <YOUR_SERVICE_FILE_NAME>.service
+```
+
+#### Reload systemd (Reload all unit files into memory so that they take effect)
+```bash
+systemctl daemon-reload
+```
