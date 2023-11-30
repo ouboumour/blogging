@@ -37,3 +37,13 @@ systemctl start <YOUR_SERVICE_NAME>
 ```bash
 systemctl stop <YOUR_SERVICE_NAME>
 ```
+
+#### Enable a Service (so it starts automatically on Linux instance start)
+```bash
+systemctl enable <YOUR_SERVICE_NAME>
+```
+
+#### Disable a Service
+```bash
+systemctl disable <YOUR_SERVICE_NAME>
+```
