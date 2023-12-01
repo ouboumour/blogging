@@ -69,3 +69,26 @@ Below the list of colors displayed by the ls command, with the meaning of each:
 - `Magenta` or `Pink`: Graphic image file
 - `Red`: Archive file
 - `Red with a black background`: Broken link
+
+#### Explore Aliases
+Since we talked about ls-aliases.
+There are more useful ones.
+The alias value may not be consistent depending on the Linux used Distro.
+
+To show all ls-aliases, you can run the command bellow
+```bash
+alias | grep ls
+```
+
+Bellow the output of the command executed against my ubuntu instance.
+
+```
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -alF'
+alias ls='ls --color=auto'
+```
+
+#### Add Custom Aliases
+You can add your custom aliases, by adding your commands to the `~/bashrc` file.
+That way, you will not lose your created aliases once you close your session.
