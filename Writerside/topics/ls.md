@@ -7,13 +7,13 @@
 
 ## Hands-on
 
-#### Show file names inside a target path
+### Show file names inside a target path
 ```bash
 ls <TARGET_PATH>
 ```
 By default, the ls output is alphabetically ordered.
 
-#### Show file names inside a target path + metadata for each
+### Show file names inside a target path + metadata for each
 ```bash
 ls -l <TARGET_PATH>
 ```
@@ -31,24 +31,24 @@ With:
 
 `O` : Read, Write and execute permissions for **Others** (everyone else)
 
-#### Show hidden files
+### Show hidden files
 ```bash
 ls -a <TARGET_PATH>
 ```
 
-#### Sort files by Last Modification Date
+### Sort files by Last Modification Date
 
-###### Most recent to oldest
+#### Most recent to oldest
 ```bash
 ls -t <TARGET_PATH>
 ```
 
-###### Oldest to most recent
+#### Oldest to most recent
 ```bash
 ls -tr <TARGET_PATH>
 ```
 
-#### ls colors meaning
+### ls colors meaning
 On most used Linux distros, if not all of them, the ls command that we run is not the binary itself.
 It's actually an alias that you can show its value by running the command.
 ```bash
@@ -70,7 +70,7 @@ Below the list of colors displayed by the ls command, with the meaning of each:
 - `Red`: Archive file
 - `Red with a black background`: Broken link
 
-#### Explore Aliases
+### Explore Aliases
 Since we talked about ls-aliases.
 There are more useful ones.
 The alias value may not be consistent depending on the Linux used Distro.
@@ -89,6 +89,6 @@ alias ll='ls -alF'
 alias ls='ls --color=auto'
 ```
 
-#### Add Custom Aliases
+### Add Custom Aliases
 You can add your custom aliases, by adding your commands to the `~/bashrc` file.
 That way, you will not lose your created aliases once you close your session.
