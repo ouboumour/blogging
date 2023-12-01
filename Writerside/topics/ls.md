@@ -35,3 +35,37 @@ With:
 ```bash
 ls -a <TARGET_PATH>
 ```
+
+#### Sort files by Last Modification Date
+
+###### Most recent to oldest
+```bash
+ls -t <TARGET_PATH>
+```
+
+###### Oldest to most recent
+```bash
+ls -tr <TARGET_PATH>
+```
+
+#### ls colors meaning
+On most used Linux distros, if not all of them, the ls command that we run is not the binary itself.
+It's actually an alias that you can show its value by running the command.
+```bash
+alias ls
+```
+The output will look like follow : `alias ls='ls --color=auto'`.
+Which means
+it's the ls alias
+that runs behind the scenes the ls binary with color option to make sure we got colored output depending on the files
+(including directories) types.
+
+Below the list of colors displayed by the ls command, with the meaning of each:
+
+- `Blue`: Directory or folders
+- `Green`: Executable or recognized data file
+- `Cyan` or `Sky Blue`: Symbolic link file
+- `Yellow with a black background`: Device
+- `Magenta` or `Pink`: Graphic image file
+- `Red`: Archive file
+- `Red with a black background`: Broken link
