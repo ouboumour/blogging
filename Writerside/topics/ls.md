@@ -30,3 +30,8 @@ With:
 `G` : Read, Write and execute permissions for **Group**
 
 `O` : Read, Write and execute permissions for **Others** (everyone else)
+
+#### Show hidden files
+```bash
+ls -a <TARGET_PATH>
+```
