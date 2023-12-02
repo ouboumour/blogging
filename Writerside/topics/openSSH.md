@@ -155,3 +155,51 @@ ssh-add <PATH_TO_YOUR_PRIVATE_KEY>
 Now next time you'll try to connect to the remote server via ssh, it should not ask for the passphrase.
 
 [//]: # (![ssh_connection_after_ssh_add]&#40;images/ssh_connection_after_ssh_add.png&#41;)
+
+## SSH Server Configuration
+The main file that you'll find your self modifying
+whenever you want to change the server ssh configuration is **/etc/ssh/sshd_config**.
+
+###### Change the Default SSH Port Number (22)
+You can do that by changing the **Port** key value inside the **sshd_config** file.
+
+###### Disable Permit Root Login
+You can do that by setting the **PermitRootLogin** key value to **no** inside the **sshd_config** file.
+
+Note: It is highly recommended to disable the ssh root login.
+
+###### Disable Password Authentication
+You can do that by setting the **PasswordAuthentication** key value to **no** inside the **sshd_config** file.
+
+Note: It is highly recommended to disable the password authentication to force the keyfile-based authentication.
+
+## Troubleshooting
+You can help debugging the situation by following the logs.
+
+#### Method 1
+<tabs>
+    <tab title="Debian-based Linux Distros">
+        <code-block lang="bash">tail -f /var/log/auth.log</code-block>
+    </tab>
+    <tab title="RPM-based Linux Distros">
+        <code-block lang="bash">tail -f /var/log/secure</code-block> 
+    </tab>
+</tabs>
+
+#### Method 2
+<tabs>
+    <tab title="Debian-based Linux Distros (tested on Ubuntu)">
+        <code-block lang="bash">journalctl -fu ssh</code-block>
+    </tab>
+    <tab title="RPM-based Linux Distros (tested on Fedora)">
+        <code-block lang="bash">journalctl -fu sshd</code-block> 
+    </tab>
+</tabs>
+
+## Quick tips using ssh
+
+#### Execute one command against the remote instance
+
+```bash
+ssh -p <PORT_NUMBER> <YOUR_REMOTE_SERVER_USERNAME>@<YOUR_REMOTE_SERVER_IP_ADDRESS> ls
+```
