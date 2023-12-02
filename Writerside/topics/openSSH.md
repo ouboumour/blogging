@@ -32,3 +32,22 @@ Otherwise, you could search for the package using your package manager.
 The output should mention the package if it exists.
 
 The openssh-client is installed by default on most Linux instances. Otherwise, you can install it running the command bellow.
+
+
+<tabs>
+    <tab title="Debian-based Linux Distros">
+        <code-block lang="bash">apt install -y openssh-client</code-block>
+    </tab>
+    <tab title="RPM-based Linux Distros">
+        <code-block lang="bash">dnf install -y openssh-clients</code-block> 
+    </tab>
+</tabs>
+
+
+And that's it! You should be able now to connect to a remote machines.
+
+If you encounter any problems, you can start troubleshooting by checking the service status using systemctl.
+```bash
+systemctl status sshd
+```
+Note: for Debian-based Linux distros you can use interchangeably **ssh** and **sshd**, not the case in RPM-based Linux distros where you must use only **sshd**.
