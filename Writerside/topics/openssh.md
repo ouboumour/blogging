@@ -12,7 +12,7 @@ OpenSSH is a suite of utilities (binaries), the two most important are the serve
 
 ##  Install openssh-client
 
-#### Check if openssh-client is installed
+### Check if openssh-client is installed
 ```bash
 which ssh
 ```
@@ -53,11 +53,11 @@ systemctl status sshd
 Note: for Debian-based Linux distros you can use interchangeably **ssh** and **sshd**, not the case in RPM-based Linux distros where you must use only **sshd**.
 
 ## Connect to a remote machine using OpenSSH Client
-#### Remote machine prerequisites
+### Remote machine prerequisites
 1. Install **openssh-server** package.
 2. Allows traffic incoming via port 22.
 
-#### Connect to remote machine using OpenSSH Client
+### Connect to remote machine using OpenSSH Client
 Once the prerequisites above are satisfied, you can go ahead and connect to the remote machine.
 ```bash
 ssh -p <PORT_NUMBER> <YOUR_REMOTE_SERVER_USERNAME>@<YOUR_REMOTE_SERVER_IP_ADDRESS>
@@ -73,7 +73,7 @@ the **.ssh** directory is created inside the home directory
 which contains the **known_hosts** file that stores all the servers fingerprints. That way it'll not ask you again for the connection confirmation.       
 One other utility of the **known_hosts** file is that is preventing cyberattacks like Man-in-the-middle attack.
 
-[//]: # (![ssh_tree_after_first_connection]&#40;images/ssh_tree_after_first_connection.png&#41;)
+![ssh_tree_after_first_connection](ssh_tree_after_first_connection.png){ width=706} { height=100} {border-effect=line}
 
 ## Keep track of ssh auth attempts
 As an administrator,
@@ -92,83 +92,83 @@ Fortunately, you can store that information in a specific file under **~/.ssh/co
 That way you only need to provide that id,
 the openssh then will grab all the needed information by looking at that specific file.
 
-[//]: # (![ssh_config]&#40;images/ssh_config.png&#41;)
+![ssh_config](ssh_config.png){ width=706 }{border-effect=line}
 
 Note: **~/.ssh/config** override the system config file that you can find at **/etc/ssh/ssh_config**
 
 ## Using public/private keys
-#### Create a key pair (from the client instance)
+### Create a key pair (from the client instance)
 ```bash
 ssh-keygen -t [ed25519|rsa|dsa|ecdsa|<YOUR_PUBLIC_KEY_ALGORITHM>] -C "<YOUR_COMMENT>"
 ```
 
-[//]: # (![ssh_keygen]&#40;images/ssh_keygen.png&#41;)
+![ssh_keygen](ssh_keygen.png){ width=706 }{border-effect=line}
 
 The public and private key will be respectively created under **~/.ssh/id_ed25519.pub** and **id_ed25519**.
 Note: providing a passphrase is recommended for security purposes.
 
-[//]: # (![ssh_tree_after_keygen]&#40;images/ssh_tree_after_keygen.png&#41;)
+![ssh_tree_after_keygen](ssh_tree_after_keygen.png){ width=706 }{border-effect=line}
 
-#### Share the public key with the remote server
-###### Method 1: Copy/paste the pub key manually
+### Share the public key with the remote server
+#### Method 1: Copy/paste the pub key manually
 Copy **~/.ssh/id_ed25519.pub** content and paste it in **~/.ssh/authorized_keys**.
-###### Method 2: Automatically with one command
+#### Method 2: Automatically with one command
 ```bash
 ssh-copy-id -i <PATH_TO_YOUR_PUB_KEY> -p <PORT_NUMBER> <YOUR_IP_ADDRESS>
 ```
 
-[//]: # (![ssh_copy_id]&#40;images/ssh_copy_id.png&#41;)
+![ssh_copy_id](ssh_copy_id.png){ width=706 }{border-effect=line}
 
 As a result, your ssh connection is not password-based anymore.
 Its keys-based and you'll be asked to enter your passphrase instead of the password.
 
-#### Connect to a remote server using keyfile-based ssh
+### Connect to a remote server using keyfile-based ssh
 ```bash
 ssh -i <PATH_TO_YOUR_PRIVATE_KEY> -p <PORT_NUMBER> <YOUR_REMOTE_SERVER_USERNAME>@<YOUR_REMOTE_SERVER_IP_ADDRESS>
 ``` 
 Note: If you kept the default suggested private file (name and path), there is no need to provide the private file.
 
-#### ssh-agent
+### ssh-agent
 **ssh-agent** helps you cash the key in-memory so that you only need to enter the passphrase onetime and then the key is unlocked for every connection attempt in the current session.
-###### Check if ssh-agent is running
+#### Check if ssh-agent is running
 ```bash
 ps aux | grep ssh-agent 
 ```
 
-[//]: # (![ps_aux_ssh_agent]&#40;images/ps_aux_ssh_agent.png&#41;)
+![ps_aux_ssh_agent](ps_aux_ssh_agent.png){ width=706 }{border-effect=line}
 
-###### run the ssh-agent
+#### run the ssh-agent
 ```bash
 eval $(ssh-agent) 
 ```
 
-[//]: # (![eval_ssh_agent]&#40;images/eval_ssh_agent.png&#41;)
+![eval_ssh_agent](eval_ssh_agent.png){ width=706 }{border-effect=line}
 
-###### Add a private key to the ssh-agent
+#### Add a private key to the ssh-agent
 To unlock the private key for the whole session, you can use ssh-add utility.
 ```bash
 ssh-add <PATH_TO_YOUR_PRIVATE_KEY> 
 ```
 
-[//]: # (![ssh_add]&#40;images/ssh_add.png&#41;)
+![ssh_add](ssh_add.png){ width=706 }{border-effect=line}
 
 Now next time you'll try to connect to the remote server via ssh, it should not ask for the passphrase.
 
-[//]: # (![ssh_connection_after_ssh_add]&#40;images/ssh_connection_after_ssh_add.png&#41;)
+![ssh_connection_after_ssh_add](ssh_connection_after_ssh_add.png){ width=706 }{border-effect=line}
 
 ## SSH Server Configuration
 The main file that you'll find your self modifying
 whenever you want to change the server ssh configuration is **/etc/ssh/sshd_config**.
 
-###### Change the Default SSH Port Number (22)
+#### Change the Default SSH Port Number (22)
 You can do that by changing the **Port** key value inside the **sshd_config** file.
 
-###### Disable Permit Root Login
+#### Disable Permit Root Login
 You can do that by setting the **PermitRootLogin** key value to **no** inside the **sshd_config** file.
 
 Note: It is highly recommended to disable the ssh root login.
 
-###### Disable Password Authentication
+#### Disable Password Authentication
 You can do that by setting the **PasswordAuthentication** key value to **no** inside the **sshd_config** file.
 
 Note: It is highly recommended to disable the password authentication to force the keyfile-based authentication.
@@ -176,7 +176,7 @@ Note: It is highly recommended to disable the password authentication to force t
 ## Troubleshooting
 You can help debugging the situation by following the logs.
 
-#### Method 1
+### Method 1
 <tabs>
     <tab title="Debian-based Linux Distros">
         <code-block lang="bash">tail -f /var/log/auth.log</code-block>
@@ -186,7 +186,7 @@ You can help debugging the situation by following the logs.
     </tab>
 </tabs>
 
-#### Method 2
+### Method 2
 <tabs>
     <tab title="Debian-based Linux Distros (tested on Ubuntu)">
         <code-block lang="bash">journalctl -fu ssh</code-block>
@@ -198,7 +198,7 @@ You can help debugging the situation by following the logs.
 
 ## Quick tips using ssh
 
-#### Execute one command against the remote instance
+### Execute one command against the remote instance
 
 ```bash
 ssh -p <PORT_NUMBER> <YOUR_REMOTE_SERVER_USERNAME>@<YOUR_REMOTE_SERVER_IP_ADDRESS> ls
