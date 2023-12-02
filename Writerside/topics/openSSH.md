@@ -136,3 +136,22 @@ ps aux | grep ssh-agent
 ```
 
 [//]: # (![ps_aux_ssh_agent]&#40;images/ps_aux_ssh_agent.png&#41;)
+
+###### run the ssh-agent
+```bash
+eval $(ssh-agent) 
+```
+
+[//]: # (![eval_ssh_agent]&#40;images/eval_ssh_agent.png&#41;)
+
+###### Add a private key to the ssh-agent
+To unlock the private key for the whole session, you can use ssh-add utility.
+```bash
+ssh-add <PATH_TO_YOUR_PRIVATE_KEY> 
+```
+
+[//]: # (![ssh_add]&#40;images/ssh_add.png&#41;)
+
+Now next time you'll try to connect to the remote server via ssh, it should not ask for the passphrase.
+
+[//]: # (![ssh_connection_after_ssh_add]&#40;images/ssh_connection_after_ssh_add.png&#41;)
