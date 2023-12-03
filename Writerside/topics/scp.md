@@ -58,3 +58,21 @@ So as a final result, if all of those conditions are satisfied, you can simplify
 ```bash
 scp <LOCAL_FILE_PATH> <REMOTE_SERVER_IP_ADDRESS>
 ```
+
+#### Copy a file from a remote to local machine
+It is possible to reverse the order
+to be able to fetch a directory/file from the server and download it to your local machine.
+
+```bash
+scp -P <PORT_NUMBER> <REMOTE_SERVER_USERNAME>@<REMOTE_SERVER_IP_ADDRESS>:<REMOTE_SERVER_DIRECTORY_PATH> <LOCAL_FILE_PATH>
+```
+
+### Copy a directory
+```bash
+scp -P <PORT_NUMBER> -rp <LOCAL_DIRECTORY_PATH> <REMOTE_SERVER_USERNAME>@<REMOTE_SERVER_IP_ADDRESS>:<REMOTE_SERVER_DIRECTORY_PATH> 
+```
+With:
+
+**-r**: to copy a directory content recursively.
+
+**-p**: to retain files modification datetime.
