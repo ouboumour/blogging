@@ -48,3 +48,13 @@ the file will be copied to the target machine's home directory but don't get rid
 that the local machine username matches the remote machine username, you can omit
 passing the last one as an argument
 but get rid of the **@** though.
+
+
+> The default ssh port is 22.
+>
+{style="note"}
+
+So as a final result, if all of those conditions are satisfied, you can simplify the commandline as bellow.
+```bash
+scp <LOCAL_FILE_PATH> <REMOTE_SERVER_IP_ADDRESS>
+```
