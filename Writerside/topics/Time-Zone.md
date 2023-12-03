@@ -5,36 +5,43 @@
 
 <tabs>
     <tab title="Based on timedatectl">
-        <code-block lang="bash">timedatectl</code-block>
+        <procedure>
+            <code-block lang="bash">timedatectl</code-block>
+            <img src="timedatectl_before.png" alt="timedatectl_before" width="706" border-effect="line"/>
+        </procedure>
     </tab>
-    <tab title="based on localtime file symbolic link">
-        <code-block lang="bash">ls -l /etc/localtime</code-block> 
+    <tab title="Based on localtime file symbolic link">
+        <procedure>
+            <code-block lang="bash">ls -l /etc/localtime</code-block> 
+            <img src="etc_localtime.png" alt="etc_localtime" width="706" border-effect="line"/>
+        </procedure>
     </tab>
 </tabs>
-
-[//]: # (![timedatectl_before]&#40;images/timedatectl_before.png&#41;)
-
-[//]: # (![etc_localtime]&#40;images/etc_localtime.png&#41;)
-
 
 ## Checking available Time Zones
 ```bash
 timedatectl list-timezones
 ```
 
-> You can use grep command utility to make the search process faster.
+<tip>
+    <p>
+        Example for Europe/Paris timezone.
+    </p>  
+    <img src="grep_paris_timezone.png" alt="grep_paris_timezone" width="706" border-effect="line"/>
+</tip>
 
-Example for Europe/Paris timezone.
-
-[//]: # (![grep_paris_timezone]&#40;images/grep_paris_timezone.png&#41;)
+> You can use `grep` command utility to make the search process faster.
+>
+{style="note"}
 
 ## Changing the Time Zone
 ```bash
 timedatectl set-timezone <YOUR_TIME_ZONE>
 ```
 
-> You can check if the new timezone is set correctly by re-running the command.
-> 
-{style="note"}
-
-[//]: # (![timedatectl_after]&#40;images/timedatectl_after.png&#41;)
+<tip>
+    <p>
+        You can check if the new timezone is set correctly by re-running the command.
+    </p>  
+    <img src="timedatectl_after.png" alt="timedatectl_after" width="706" border-effect="line"/>
+</tip>
