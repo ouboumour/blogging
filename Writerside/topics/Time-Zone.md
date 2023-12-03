@@ -2,40 +2,39 @@
 
 ## Checking the Current Time Zone
 
-###### Method 1
-```bash
-timedatectl
-```
+
+<tabs>
+    <tab title="Based on timedatectl">
+        <code-block lang="bash">timedatectl</code-block>
+    </tab>
+    <tab title="based on localtime file symbolic link">
+        <code-block lang="bash">ls -l /etc/localtime</code-block> 
+    </tab>
+</tabs>
 
 [//]: # (![timedatectl_before]&#40;images/timedatectl_before.png&#41;)
 
-###### Method 2
-```bash
-ls -l /etc/localtime
-```
-
 [//]: # (![etc_localtime]&#40;images/etc_localtime.png&#41;)
 
-## Changing the Time Zone {id="changing-the-time-zone_1"}
 
-###### Checking available Time Zones
+## Checking available Time Zones
 ```bash
-timedatectl timedatectl list-timezones
+timedatectl list-timezones
 ```
 
-Note: You can use grep command utility to make the search process faster.   
+> You can use grep command utility to make the search process faster.
+
 Example for Europe/Paris timezone.
 
 [//]: # (![grep_paris_timezone]&#40;images/grep_paris_timezone.png&#41;)
 
-###### Changing the Time Zone
+## Changing the Time Zone
 ```bash
 timedatectl set-timezone <YOUR_TIME_ZONE>
 ```
 
-###### Final check
-```bash
-timedatectl
-```
+> You can check if the new timezone is set correctly by re-running the command.
+> 
+{style="note"}
 
 [//]: # (![timedatectl_after]&#40;images/timedatectl_after.png&#41;)
