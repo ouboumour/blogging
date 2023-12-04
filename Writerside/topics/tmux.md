@@ -34,3 +34,13 @@ Window `---*` Pane
 
 By default, the package is not installed, if that's the case for you, the output will be empty,
 or instead you got a message like "no tmux ...".
+
+#### install tmux
+<tabs>
+    <tab title="Debian-based Linux Distros">
+        <code-block lang="bash">apt install -y tmux</code-block>
+    </tab>
+    <tab title="RPM-based Linux Distros">
+        <code-block lang="bash">dnf install -y tmux</code-block> 
+    </tab>
+</tabs>
