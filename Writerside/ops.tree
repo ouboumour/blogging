@@ -6,6 +6,7 @@
                  name="Ops"
                  start-page="starter-topic.md">
 
+    <toc-element topic="vim.md"/>
     <toc-element topic="starter-topic.md"/>
     <toc-element topic="scp.md"/>
     <toc-element topic="Time-Zone.md"/>
