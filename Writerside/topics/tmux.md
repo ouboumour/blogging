@@ -18,3 +18,19 @@ that it keeps your sessions active in the background even if your ssh connection
 Session `---*` Window
 
 Window `---*` Pane
+
+## Prerequisites
+
+#### Check tmux availability
+
+<tabs>
+    <tab title="Using command">
+        <code-block lang="bash">command -v tmux</code-block>
+    </tab>
+    <tab title="Using which">
+        <code-block lang="bash">which tmux</code-block>
+    </tab>
+</tabs>
+
+By default, the package is not installed, if that's the case for you, the output will be empty,
+or instead you got a message like "no tmux ...".
