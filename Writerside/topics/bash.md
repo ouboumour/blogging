@@ -33,3 +33,12 @@ In the terminal, navigate to the directory containing your script and make it ex
 ```bash
 chmod +x myscript.sh
 ```
+
+### 5. Run Your Script
+Execute your script using `./` followed by the script name.
+
+```bash
+./myscript.sh
+```
+
+> You can also use the absolute path.
