@@ -42,3 +42,77 @@ Execute your script using `./` followed by the script name.
 ```
 
 > You can also use the absolute path.
+
+## Variables and User Input
+
+### Variables
+Use variables to store and manipulate data.
+```bash
+#!/bin/bash
+greeting="Hello"
+echo $greeting
+```
+
+### User Input
+Read user input using the `read` command.
+```bash
+#!/bin/bash
+echo "Enter your name:"
+read name
+echo "Hello, $name!"
+```
+
+## Conditional Statements
+### If Statement
+Use an `if` statement for conditional execution.
+```bash
+#!/bin/bash
+echo "Enter a number:"
+read num
+
+if [ $num -gt 10 ]; then
+  echo "The number is greater than 10."
+else
+  echo "The number is 10 or less."
+fi
+```
+
+## Loops
+
+###  While Loop
+Use a `while` loop for repeated execution.
+```bash
+#!/bin/bash
+count=1
+
+while [ $count -le 5 ]; do
+  echo "Count: $count"
+  ((count++))
+done
+```
+
+### For Loop
+Use a `for` loop for iterating over a range or a list.
+```bash
+#!/bin/bash
+for i in {1..5}; do
+  echo "Number: $i"
+done
+```
+
+## Functions
+
+### Define/Declare a function
+```bash
+#!/bin/bash
+function greet {
+  echo "Hello, $1!"
+}
+```
+
+### Call a function
+You can use/call the function above and pass arguments as follows.
+```
+greet "Alice"
+greet "Bob"
+```
