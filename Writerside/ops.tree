@@ -6,6 +6,7 @@
                  name="Ops"
                  start-page="starter-topic.md">
 
+    <toc-element topic="generic.md"/>
     <toc-element topic="vim.md"/>
     <toc-element topic="starter-topic.md"/>
     <toc-element topic="bash.md"/>
