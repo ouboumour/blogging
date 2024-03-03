@@ -30,7 +30,12 @@ df -h
 
 ### Displays the amount of free and used memory
 ```bash
-free -m
+free -h
+```
+
+### Provides cpu information
+```bash
+lscpu
 ```
 
 ### Provides system uptime information
