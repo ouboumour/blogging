@@ -38,6 +38,19 @@ free -h
 lscpu
 ```
 
+### Get CPU Architecture
+```bash
+arch
+```
+
+<note>
+    Different terms are used to refer to the same `cpu architecture`
+    <ul>
+        <li>AMD64 = x86_64 = x64 = Intel 64-bit</li>
+        <li>ARM64 = AArch64</li>
+    </ul>
+</note>
+
 ### Provides system uptime information
 ```bash
 uptime
