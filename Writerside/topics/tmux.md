@@ -73,7 +73,11 @@ or instead you got a message like "no tmux ...".
 | `t`              |                                                               | Display time in the current pane.                            |
 | `:set mouse one` |                                                               | Set mouse one make the switch between panes/windows easier.  |
 
-For more useful commands, take a look at [tmuxcheatsheet](https://tmuxcheatsheet.com/).
+> For more useful commands, take a look at:
+> - [keycombiner](https://keycombiner.com/collections/tmux/).
+> - [tmuxcheatsheet](https://tmuxcheatsheet.com/).
+>
+{style="note"}
 
 ## Tmux Customization
 You can customize your tmux experience, by creating and editing the file `~/.tmux.conf`.
